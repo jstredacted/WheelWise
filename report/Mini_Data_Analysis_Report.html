@@ -19,7 +19,7 @@
   <ul>
     <li>Activity Title: Mini Data Analysis & Reporting Activity</li>
     <li>Dataset: <code>car_prices.csv</code></li>
-    <li>Students: Justin Louis Amper Dampal and Greg Danielle Cabanda</li>
+    <li>Students: Justin Louis Amper Dampal and Greg Danielle Cabanda Duetes</li>
   </ul>
 
   <h2>2. Introduction</h2>
@@ -27,44 +27,58 @@
   <p>The data likely originates from an operational automotive sales platform (e.g., dealer auction management or vehicle marketplace transaction system).</p>
   <p>This report converts raw operational records into analytical summaries by category, time, and pricing behavior.</p>
 
-  <h2>3. OLTP Perspective</h2>
+  <h2>3. Data Dictionary</h2>
+  <p>The original dataset contains 16 columns. Each column is described below:</p>
+  <table><thead><tr><th>Column</th><th>Description</th><th>Type</th><th>Example</th><th>Notes</th></tr></thead><tbody><tr><td><code>year</code></td><td>Model year of the vehicle</td><td>int</td><td><code>2015</code></td><td>Ranges from ~1990 to 2015 in this dataset</td></tr><tr><td><code>make</code></td><td>Manufacturer / brand of the vehicle</td><td>string</td><td><code>FORD</code></td><td>Uppercased during cleaning; 50+ unique makes</td></tr><tr><td><code>model</code></td><td>Specific model name within the make</td><td>string</td><td><code>F-150</code></td><td>Over 1,000 unique model values</td></tr><tr><td><code>trim</code></td><td>Trim level or package variant</td><td>string</td><td><code>SE</code></td><td>Indicates feature/equipment tier; may be missing</td></tr><tr><td><code>body</code></td><td>Body style classification of the vehicle</td><td>string</td><td><code>SEDAN</code></td><td>Uppercased; common values: SEDAN, SUV, CREW CAB</td></tr><tr><td><code>transmission</code></td><td>Transmission type</td><td>string</td><td><code>automatic</code></td><td>Typically 'automatic' or 'manual'</td></tr><tr><td><code>vin</code></td><td>Vehicle Identification Number (unique 17-char ID)</td><td>string</td><td><code>1FAHP3F2...</code></td><td>Unique per vehicle; serves as a natural key</td></tr><tr><td><code>state</code></td><td>U.S. state where the sale occurred</td><td>string</td><td><code>FL</code></td><td>Uppercased two-letter abbreviation</td></tr><tr><td><code>condition</code></td><td>Numeric condition rating of the vehicle</td><td>float</td><td><code>3.3</code></td><td>Scale approximately 1.0 (poor) to 5.0 (excellent)</td></tr><tr><td><code>odometer</code></td><td>Mileage reading at time of sale</td><td>float</td><td><code>36368.0</code></td><td>Measured in miles; higher values indicate more use</td></tr><tr><td><code>color</code></td><td>Exterior color of the vehicle</td><td>string</td><td><code>black</code></td><td>Free-text; some missing values</td></tr><tr><td><code>interior</code></td><td>Interior color of the vehicle</td><td>string</td><td><code>gray</code></td><td>Free-text; some missing values</td></tr><tr><td><code>seller</code></td><td>Name of the selling entity</td><td>string</td><td><code>hertz auto sales</code></td><td>Dealer or auction house name</td></tr><tr><td><code>mmr</code></td><td>Manheim Market Report value (independent market estimate)</td><td>float</td><td><code>14525.0</code></td><td>Benchmark price used to evaluate deal quality</td></tr><tr><td><code>sellingprice</code></td><td>Actual transaction price the vehicle sold for</td><td>float</td><td><code>13500.0</code></td><td>Primary metric for pricing analysis</td></tr><tr><td><code>saledate</code></td><td>Full timestamp of the sale event</td><td>string</td><td><code>Tue Dec 16 2014 12:30:00 GMT-0800</code></td><td>Parsed into sale_year, sale_month during cleaning</td></tr></tbody></table>
+
+  <h2>4. OLTP Perspective</h2>
   <p>One row represents one completed car sale transaction. It stores transactional attributes (what car was sold, by whom, when, and for how much).</p>
   <p>This is OLTP data because records are event-level, high-volume, and designed for day-to-day operational recording rather than summarized reporting.</p>
   <p>A typical system storing this data is a vehicle sales transaction management system integrated with dealer inventory and auction workflows.</p>
 
-  <h2>4. Data Analysis (OLAP Results)</h2>
-  <h3>4.1 Transactions per Category (Make)</h3>
+  <h2>5. Data Analysis (OLAP Results)</h2>
+  <h3>5.1 Transactions per Category (Make)</h3>
   <table><thead><tr><th>make</th><th>transactions</th></tr></thead><tbody><tr><td>FORD</td><td>93997</td></tr><tr><td>CHEVROLET</td><td>60587</td></tr><tr><td>NISSAN</td><td>54017</td></tr><tr><td>TOYOTA</td><td>39966</td></tr><tr><td>DODGE</td><td>30955</td></tr><tr><td>HONDA</td><td>27351</td></tr><tr><td>HYUNDAI</td><td>21836</td></tr><tr><td>BMW</td><td>20793</td></tr><tr><td>KIA</td><td>18084</td></tr><tr><td>CHRYSLER</td><td>17485</td></tr></tbody></table>
-  <h3>4.2 Transactions per Time Period (Year)</h3>
-  <table><thead><tr><th>sale_year</th><th>transactions</th></tr></thead><tbody><tr><td>2014.00</td><td>53725.00</td></tr><tr><td>2015.00</td><td>505074.00</td></tr></tbody></table>
-  <h3>4.3 Transactions per Category (Body Type)</h3>
+  <h3>5.2 Transactions per Time Period (Year)</h3>
+  <table><thead><tr><th>sale_year</th><th>transactions</th></tr></thead><tbody><tr><td>2014</td><td>53725</td></tr><tr><td>2015</td><td>505074</td></tr></tbody></table>
+  <h3>5.3 Transactions per Time Period (Month)</h3>
+  <table><thead><tr><th>year_month</th><th>transactions</th></tr></thead><tbody><tr><td>2014-01</td><td>206</td></tr><tr><td>2014-02</td><td>1</td></tr><tr><td>2014-12</td><td>53518</td></tr><tr><td>2015-01</td><td>140611</td></tr><tr><td>2015-02</td><td>163052</td></tr><tr><td>2015-03</td><td>46277</td></tr><tr><td>2015-04</td><td>1450</td></tr><tr><td>2015-05</td><td>52444</td></tr><tr><td>2015-06</td><td>99938</td></tr><tr><td>2015-07</td><td>1302</td></tr></tbody></table>
+  <h3>5.4 Transactions per Category (Body Type)</h3>
   <table><thead><tr><th>body</th><th>transactions</th></tr></thead><tbody><tr><td>SEDAN</td><td>241343</td></tr><tr><td>SUV</td><td>143844</td></tr><tr><td>HATCHBACK</td><td>26237</td></tr><tr><td>MINIVAN</td><td>25529</td></tr><tr><td>COUPE</td><td>17752</td></tr><tr><td>CREW CAB</td><td>16394</td></tr><tr><td>WAGON</td><td>16129</td></tr><tr><td>CONVERTIBLE</td><td>10476</td></tr><tr><td>SUPERCREW</td><td>9033</td></tr><tr><td>G SEDAN</td><td>7417</td></tr></tbody></table>
-  <h3>4.4 Transactions per Category (State)</h3>
+  <h3>5.5 Transactions per Category (State)</h3>
   <table><thead><tr><th>state</th><th>transactions</th></tr></thead><tbody><tr><td>FL</td><td>82945</td></tr><tr><td>CA</td><td>73148</td></tr><tr><td>PA</td><td>53907</td></tr><tr><td>TX</td><td>45913</td></tr><tr><td>GA</td><td>34750</td></tr><tr><td>NJ</td><td>27784</td></tr><tr><td>IL</td><td>23486</td></tr><tr><td>NC</td><td>21845</td></tr><tr><td>OH</td><td>21575</td></tr><tr><td>TN</td><td>20895</td></tr></tbody></table>
-  <h3>4.5 Additional Aggregation: Average Selling Price by Make</h3>
+  <h3>5.6 Additional Aggregation: Average Selling Price by Make</h3>
   <table><thead><tr><th>make</th><th>avg_sellingprice</th></tr></thead><tbody><tr><td>ROLLS-ROYCE</td><td>153488.24</td></tr><tr><td>FERRARI</td><td>127210.53</td></tr><tr><td>LAMBORGHINI</td><td>112625.00</td></tr><tr><td>BENTLEY</td><td>74367.67</td></tr><tr><td>AIRSTREAM</td><td>71000.00</td></tr><tr><td>TESLA</td><td>67054.35</td></tr><tr><td>ASTON MARTIN</td><td>54812.00</td></tr><tr><td>FISKER</td><td>46461.11</td></tr><tr><td>MASERATI</td><td>44947.06</td></tr><tr><td>LOTUS</td><td>40800.00</td></tr></tbody></table>
-  <h3>4.6 Additional Aggregation: Average Price vs MMR by Make</h3>
+  <h3>5.7 Additional Aggregation: Average Price vs MMR by Make</h3>
   <p>(Positive values indicate selling above MMR; negative values indicate below MMR.)</p>
   <table><thead><tr><th>make</th><th>avg_price_vs_mmr</th></tr></thead><tbody><tr><td>AIRSTREAM</td><td>41500.00</td></tr><tr><td>ASTON MARTIN</td><td>1252.00</td></tr><tr><td>LAMBORGHINI</td><td>1125.00</td></tr><tr><td>MAZDA TK</td><td>1125.00</td></tr><tr><td>LOTUS</td><td>500.00</td></tr><tr><td>GMC TRUCK</td><td>429.55</td></tr><tr><td>HUMMER</td><td>252.62</td></tr><tr><td>HYUNDAI TK</td><td>225.00</td></tr><tr><td>LANDROVER</td><td>197.22</td></tr><tr><td>CHEV TRUCK</td><td>75.00</td></tr></tbody></table>
 
-  <h2>5. Findings and Insights</h2>
-  <ul>
-    <li>The dataset includes <strong>558,837</strong> transactions, indicating a large operational dataset suitable for trend analysis.</li>
-    <li>The highest transaction volume is <strong>FORD</strong> with <strong>93,997</strong> transactions.</li>
-    <li>The dominant body type is <strong>SEDAN</strong> with <strong>241,343</strong> transactions.</li>
-    <li>The most active state is <strong>FL</strong> with <strong>82,945</strong> transactions.</li>
-    <li>The year with the highest number of transactions is <strong>2015</strong> with <strong>505,074</strong> records.</li>
-    <li>The peak month in the dataset is <strong>2015-02</strong> with <strong>163,052</strong> transactions.</li>
-    <li>Average selling price across valid records is <strong>$13,611.36</strong>.</li>
-    <li>On average, vehicles sold <strong>$-158.02</strong> relative to MMR (negative means below MMR overall).</li>
-  </ul>
+  <h2>6. Findings and Insights</h2>
 
-  <h2>6. Recommendation</h2>
+  <h3>6.1 Volume and Scale</h3>
+  <p>The dataset contains <strong>558,837</strong> individual sale transactions, representing a substantial operational record suitable for identifying market-wide patterns. The sheer volume confirms that the source system handles high-frequency, day-to-day transactional activity typical of an OLTP environment.</p>
+
+  <h3>6.2 Category Patterns</h3>
+  <p><strong>FORD</strong> leads all manufacturers with <strong>93,997</strong> transactions, followed by Chevrolet and Nissan. This dominance reflects Ford's historically large share of the U.S. vehicle market, its wide model lineup (sedans, trucks, SUVs), and high fleet and rental-channel volume that feeds into auction resale pipelines.</p>
+  <p>The dominant body type is <strong>SEDAN</strong> at <strong>241,343</strong> transactions, accounting for roughly 43% of all sales. SUVs follow at approximately 26%. This split mirrors broader U.S. consumer preferences during the 2014-2015 period, when sedans still held the largest share of the used-car market before the industry-wide shift toward crossovers and trucks.</p>
+
+  <h3>6.3 Geographic Distribution</h3>
+  <p><strong>FL</strong> is the most active state with <strong>82,945</strong> transactions, followed by CA and PA. Florida's leading position is likely driven by its large population, favorable climate (which reduces vehicle corrosion and preserves condition), and concentration of major auction houses such as Manheim. California follows due to its status as the largest U.S. auto market by population.</p>
+
+  <h3>6.4 Time-Based Trends</h3>
+  <p>The vast majority of transactions &mdash; <strong>505,074</strong> &mdash; occurred in <strong>2015</strong>, with only <strong>53,725</strong> in the prior year. This suggests the dataset captures a system that either ramped up operations or expanded data collection during this period.</p>
+  <p>The peak month is <strong>2015-02</strong> with <strong>163,052</strong> transactions. Monthly data reveals a general upward trend from late 2014 through early 2015, which may reflect seasonal patterns in wholesale auction activity where volumes typically increase in Q1 as dealers replenish inventory after year-end.</p>
+
+  <h3>6.5 Pricing Insights</h3>
+  <p>The average selling price across all valid records is <strong>$13,611.36</strong>. More notably, vehicles sold at an average of <strong>$-158.02</strong> relative to MMR (Manheim Market Report), meaning most cars transacted slightly below independent market valuation. This negative gap suggests a buyer-favorable market at scale, which is typical of high-volume wholesale auctions where speed of sale is prioritized over maximizing individual unit profit.</p>
+  <p>Luxury and specialty brands (Rolls-Royce, Ferrari, Lamborghini) command dramatically higher average prices but represent a very small fraction of total volume. Some niche segments like Airstream and Aston Martin show positive price-vs-MMR gaps, indicating that scarcity and collector demand can push certain vehicles above their reference value.</p>
+
+  <h2>7. Recommendation</h2>
   <ol>
-    <li>Prioritize inventory planning around high-volume makes and body types to match demand patterns.</li>
-    <li>Monitor pricing discipline for segments with consistently negative <code>price_vs_mmr</code> to reduce under-market sales.</li>
-    <li>Use monthly transaction peaks to plan auction participation, staffing, and promotional campaigns.</li>
-    <li>Track make-level performance monthly to detect which segments can sustain higher pricing above MMR.</li>
+    <li><strong>Prioritize high-volume inventory.</strong> Ford, Chevrolet, and Nissan collectively account for a large share of all transactions. Dealers and auction operators should ensure adequate supply and competitive pricing for these makes to maintain turnover and buyer engagement.</li>
+    <li><strong>Tighten pricing for below-MMR segments.</strong> The overall negative price-vs-MMR gap indicates an opportunity to improve pricing discipline. By identifying which specific makes and models consistently sell below market value, sellers can adjust reserve prices or improve vehicle presentation to narrow the gap.</li>
+    <li><strong>Leverage seasonal peaks for operational planning.</strong> The strong monthly fluctuations &mdash; particularly the surge in early 2015 &mdash; suggest that staffing, logistics, and marketing budgets should be aligned with predictable high-volume periods rather than spread evenly across the year.</li>
+    <li><strong>Monitor niche segments for premium opportunities.</strong> Brands that consistently sell above MMR (such as specialty and luxury makes) represent margin opportunities. Tracking which segments sustain above-market pricing can guide targeted acquisition strategies for higher-margin inventory.</li>
   </ol>
 
   <h2>Appendix: Method Notes</h2>

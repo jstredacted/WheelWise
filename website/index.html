@@ -20,20 +20,38 @@
         <p class="subtitle">
           This demo presents our full workflow: data understanding, transformation, aggregation, findings, and recommendations.
         </p>
+        <p class="hero__authors">Presented by Justin Louis Amper Dampal &amp; Greg Danielle Cabanda Duetes</p>
       </div>
     </header>
 
+    <nav class="sticky-nav" id="sticky-nav">
+      <div class="sticky-nav__inner">
+        <a href="#dataset-overview" class="nav-link active" data-section="dataset-overview"><span class="nav-num">01</span> Overview</a>
+        <a href="#data-dictionary" class="nav-link" data-section="data-dictionary"><span class="nav-num">02</span> Data Dictionary</a>
+        <a href="#oltp-perspective" class="nav-link" data-section="oltp-perspective"><span class="nav-num">03</span> OLTP</a>
+        <a href="#methodology" class="nav-link" data-section="methodology"><span class="nav-num">04</span> Methodology</a>
+        <a href="#dashboard" class="nav-link" data-section="dashboard"><span class="nav-num">05</span> Dashboard</a>
+        <a href="#findings" class="nav-link" data-section="findings"><span class="nav-num">06</span> Findings</a>
+      </div>
+    </nav>
+
     <main class="layout">
       <section class="panel" id="dataset-overview">
-        <h2>1. Dataset Overview</h2>
+        <h2><span class="section-num">01</span> Dataset Overview</h2>
         <div id="dataset-kpis" class="kpi-grid"></div>
         <p class="note">
           One row represents one completed car sale transaction (vehicle details, seller context, valuation, and final selling price).
         </p>
       </section>
 
+      <section class="panel" id="data-dictionary">
+        <h2><span class="section-num">02</span> Data Dictionary</h2>
+        <p class="note">All 16 original columns in <code>car_prices.csv</code>, with types, examples, and notes.</p>
+        <div id="dictionary-grid" class="dictionary-grid"></div>
+      </section>
+
       <section class="panel" id="oltp-perspective">
-        <h2>2. OLTP Perspective</h2>
+        <h2><span class="section-num">03</span> OLTP Perspective</h2>
         <div class="text-grid">
           <article>
             <h3>Why this is transactional data</h3>
@@ -51,29 +69,33 @@
       </section>
 
       <section class="panel" id="methodology">
-        <h2>3. Methodology / Code Showcase</h2>
+        <h2><span class="section-num">04</span> Methodology / Code Showcase</h2>
         <div class="code-grid">
           <article>
             <h3>Cleaning and Feature Engineering</h3>
+            <p class="code-desc" id="desc-cleaning"></p>
             <pre><code id="code-cleaning"></code></pre>
           </article>
           <article>
             <h3>Category Aggregation</h3>
+            <p class="code-desc" id="desc-category"></p>
             <pre><code id="code-category"></code></pre>
           </article>
           <article>
             <h3>Time Aggregation</h3>
+            <p class="code-desc" id="desc-time"></p>
             <pre><code id="code-time"></code></pre>
           </article>
           <article>
             <h3>Additional Insight Metric</h3>
+            <p class="code-desc" id="desc-additional"></p>
             <pre><code id="code-additional"></code></pre>
           </article>
         </div>
       </section>
 
       <section class="panel" id="dashboard">
-        <h2>4. OLAP Dashboard (PowerBI-Inspired)</h2>
+        <h2><span class="section-num">05</span> OLAP Dashboard</h2>
         <div class="filters">
           <label for="make-filter">Make</label>
           <select id="make-filter"></select>
@@ -99,25 +121,19 @@
           <article>
             <h3>Average Price vs MMR by Make</h3>
             <div id="chart-vs-mmr" class="chart"></div>
+            <p class="note" id="vs-mmr-outliers"></p>
           </article>
         </div>
       </section>
 
       <section class="panel" id="findings">
-        <h2>5. Findings and Recommendation</h2>
+        <h2><span class="section-num">06</span> Findings &amp; Recommendations</h2>
+        <h3>Key Findings</h3>
         <ul id="findings-list"></ul>
+        <h3>Recommendations</h3>
         <ol id="recommendations-list"></ol>
       </section>
 
-      <section class="panel" id="paper-output">
-        <h2>6. Paper Output</h2>
-        <p>
-          Draft report file: <code>/Users/justin/Repositories/Personal/Car Price Data Analysis/report/Mini_Data_Analysis_Report.md</code>
-        </p>
-        <p>
-          Summary tables: <code>/Users/justin/Repositories/Personal/Car Price Data Analysis/outputs/tables/</code>
-        </p>
-      </section>
     </main>
   </body>
 </html>

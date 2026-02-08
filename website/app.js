@@ -10,10 +10,15 @@ function createKpi(label, value) {
 }
 
 function setCodeShowcase(code) {
-  document.querySelector("#code-cleaning").textContent = code.cleaning;
-  document.querySelector("#code-category").textContent = code.category_summary;
-  document.querySelector("#code-time").textContent = code.time_summary;
-  document.querySelector("#code-additional").textContent = code.additional_summary;
+  document.querySelector("#code-cleaning").textContent = code.cleaning.code;
+  document.querySelector("#code-category").textContent = code.category_summary.code;
+  document.querySelector("#code-time").textContent = code.time_summary.code;
+  document.querySelector("#code-additional").textContent = code.additional_summary.code;
+
+  document.querySelector("#desc-cleaning").textContent = code.cleaning.description;
+  document.querySelector("#desc-category").textContent = code.category_summary.description;
+  document.querySelector("#desc-time").textContent = code.time_summary.description;
+  document.querySelector("#desc-additional").textContent = code.additional_summary.description;
 }
 
 function renderOverview(summary) {
@@ -27,6 +32,21 @@ function renderOverview(summary) {
     createKpi("Top Make", `${kpis.top_make} (${number.format(kpis.top_make_transactions)})`),
     createKpi("Top Body", `${kpis.top_body} (${number.format(kpis.top_body_transactions)})`),
   ].join("");
+}
+
+function renderDataDictionary(dictionary) {
+  const container = document.querySelector("#dictionary-grid");
+  container.innerHTML = dictionary
+    .map(
+      (col) => `
+    <article class="dict-card">
+      <span class="dict-card__name">${col.name}</span>
+      <span class="dict-card__type">${col.type}</span>
+      <p class="dict-card__desc">${col.description}</p>
+      <p class="dict-card__meta">Example: <code>${col.example}</code> &mdash; ${col.notes}</p>
+    </article>`
+    )
+    .join("");
 }
 
 function uniqueSorted(arr) {
@@ -76,7 +96,19 @@ function renderCharts(data, selectedMake, selectedYear) {
   const topMakes = data.top_makes;
   const monthly = data.transactions_by_month;
   const prices = data.avg_price_by_make;
-  const vsMmr = data.price_vs_mmr_by_make;
+  // Filter outliers: exclude entries where value is >5x the second-largest absolute value
+  const rawVsMmr = data.price_vs_mmr_by_make;
+  const absValues = rawVsMmr.map((d) => Math.abs(d.avg_price_vs_mmr)).sort((a, b) => b - a);
+  const outlierThreshold = absValues.length > 1 ? absValues[1] * 5 : Infinity;
+  const vsMmr = rawVsMmr.filter((d) => Math.abs(d.avg_price_vs_mmr) <= outlierThreshold);
+  const vsMmrOutliers = rawVsMmr.filter((d) => Math.abs(d.avg_price_vs_mmr) > outlierThreshold);
+  const outlierNote = document.querySelector("#vs-mmr-outliers");
+  if (vsMmrOutliers.length > 0) {
+    const items = vsMmrOutliers.map((d) => `${d.make} (${d.avg_price_vs_mmr >= 0 ? "+" : ""}${money.format(d.avg_price_vs_mmr)})`).join(", ");
+    outlierNote.textContent = `Outliers excluded from chart: ${items}`;
+  } else {
+    outlierNote.textContent = "";
+  }
 
   const markerColors = topMakes.map((d) => (selectedMake !== "All" && d.make === selectedMake ? "#1b6a62" : "#8fb9b2"));
 
@@ -193,13 +225,43 @@ function renderNarrative(data) {
   document.querySelector("#recommendations-list").innerHTML = recs.map((r) => `<li>${r}</li>`).join("");
 }
 
+function initSectionTracking() {
+  const navLinks = document.querySelectorAll(".nav-link");
+  const sections = document.querySelectorAll(".panel");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          navLinks.forEach((link) => link.classList.remove("active"));
+          const active = document.querySelector(`.nav-link[data-section="${entry.target.id}"]`);
+          if (active) active.classList.add("active");
+        }
+      });
+    },
+    { rootMargin: "-20% 0px -60% 0px", threshold: 0 }
+  );
+
+  sections.forEach((section) => observer.observe(section));
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute("href"));
+      if (target) target.scrollIntoView({ behavior: "smooth" });
+    });
+  });
+}
+
 async function init() {
   const res = await fetch("./data/dashboard_data.json");
   const data = await res.json();
 
   renderOverview(data.summary);
   setCodeShowcase(data.code_showcase);
+  renderDataDictionary(data.data_dictionary);
   renderNarrative(data);
+  initSectionTracking();
 
   const { makeFilter, yearFilter } = buildFilters(data);
 
