@@ -185,6 +185,19 @@ def main() -> None:
         .sort_values(["make", "sale_year"])
     )
 
+    tx_by_make_month = (
+        df.dropna(subset=["make", "sale_year", "sale_month"])
+        .groupby(["make", "sale_year", "sale_month"], as_index=False)
+        .size()
+        .rename(columns={"size": "transactions"})
+        .sort_values(["make", "sale_year", "sale_month"])
+    )
+    tx_by_make_month["year_month"] = (
+        tx_by_make_month["sale_year"].astype(int).astype(str)
+        + "-"
+        + tx_by_make_month["sale_month"].astype(int).astype(str).str.zfill(2)
+    )
+
     tx_by_state = (
         df.dropna(subset=["state"])
         .groupby("state", as_index=False)
@@ -201,6 +214,22 @@ def main() -> None:
         .sort_values("avg_sellingprice", ascending=False)
     )
 
+    avg_price_by_make_year = (
+        df.dropna(subset=["make", "sale_year", "sellingprice"])
+        .groupby(["make", "sale_year"], as_index=False)["sellingprice"]
+        .mean()
+        .rename(columns={"sellingprice": "avg_sellingprice"})
+        .sort_values(["make", "sale_year"])
+    )
+
+    avg_price_by_year = (
+        df.dropna(subset=["sale_year", "sellingprice"])
+        .groupby("sale_year", as_index=False)["sellingprice"]
+        .mean()
+        .rename(columns={"sellingprice": "avg_sellingprice"})
+        .sort_values("sale_year")
+    )
+
     price_vs_mmr_by_make = (
         df.dropna(subset=["make", "price_vs_mmr"])
         .groupby("make", as_index=False)["price_vs_mmr"]
@@ -209,15 +238,36 @@ def main() -> None:
         .sort_values("avg_price_vs_mmr", ascending=False)
     )
 
+    price_vs_mmr_by_make_year = (
+        df.dropna(subset=["make", "sale_year", "price_vs_mmr"])
+        .groupby(["make", "sale_year"], as_index=False)["price_vs_mmr"]
+        .mean()
+        .rename(columns={"price_vs_mmr": "avg_price_vs_mmr"})
+        .sort_values(["make", "sale_year"])
+    )
+
+    price_vs_mmr_by_year = (
+        df.dropna(subset=["sale_year", "price_vs_mmr"])
+        .groupby("sale_year", as_index=False)["price_vs_mmr"]
+        .mean()
+        .rename(columns={"price_vs_mmr": "avg_price_vs_mmr"})
+        .sort_values("sale_year")
+    )
+
     # Save tables
     tx_by_make.to_csv(TABLES_DIR / "transactions_by_make.csv", index=False)
     tx_by_body.to_csv(TABLES_DIR / "transactions_by_body.csv", index=False)
     tx_by_year.to_csv(TABLES_DIR / "transactions_by_year.csv", index=False)
     tx_by_month.to_csv(TABLES_DIR / "transactions_by_month.csv", index=False)
     tx_by_make_year.to_csv(TABLES_DIR / "transactions_by_make_year.csv", index=False)
+    tx_by_make_month.to_csv(TABLES_DIR / "transactions_by_make_month.csv", index=False)
     tx_by_state.to_csv(TABLES_DIR / "transactions_by_state.csv", index=False)
     avg_price_by_make.to_csv(TABLES_DIR / "average_sellingprice_by_make.csv", index=False)
+    avg_price_by_make_year.to_csv(TABLES_DIR / "average_sellingprice_by_make_year.csv", index=False)
+    avg_price_by_year.to_csv(TABLES_DIR / "average_sellingprice_by_year.csv", index=False)
     price_vs_mmr_by_make.to_csv(TABLES_DIR / "average_price_vs_mmr_by_make.csv", index=False)
+    price_vs_mmr_by_make_year.to_csv(TABLES_DIR / "average_price_vs_mmr_by_make_year.csv", index=False)
+    price_vs_mmr_by_year.to_csv(TABLES_DIR / "average_price_vs_mmr_by_year.csv", index=False)
 
     total_transactions = int(len(df))
     valid_price_rows = int(df["sellingprice"].notna().sum())
@@ -269,8 +319,13 @@ def main() -> None:
         "transactions_by_year": to_records(tx_by_year),
         "transactions_by_month": to_records(tx_by_month[["year_month", "transactions"]]),
         "transactions_by_make_year": to_records(tx_by_make_year),
-        "avg_price_by_make": to_records(avg_price_by_make, 15),
-        "price_vs_mmr_by_make": to_records(price_vs_mmr_by_make, 15),
+        "transactions_by_make_month": to_records(tx_by_make_month[["make", "sale_year", "year_month", "transactions"]]),
+        "avg_price_by_make": to_records(avg_price_by_make),
+        "avg_price_by_make_year": to_records(avg_price_by_make_year),
+        "avg_price_by_year": to_records(avg_price_by_year),
+        "price_vs_mmr_by_make": to_records(price_vs_mmr_by_make),
+        "price_vs_mmr_by_make_year": to_records(price_vs_mmr_by_make_year),
+        "price_vs_mmr_by_year": to_records(price_vs_mmr_by_year),
         "code_showcase": {
             "cleaning": {
                 "description": "Standardize text columns to uppercase and parse the raw saledate string (which includes timezone abbreviations) into a proper datetime for time-series analysis.",
@@ -278,11 +333,11 @@ def main() -> None:
             },
             "category_summary": {
                 "description": "Count transactions per manufacturer to identify which makes dominate auction volume. This is a standard OLAP roll-up from individual rows to category totals.",
-                "code": "# Group by make -> count rows -> sort descending\ntx_by_make = (\n    df.groupby('make')\n    .size()\n    .reset_index(name='transactions')\n    .sort_values('transactions', ascending=False)\n)\n# Top result: FORD — 12,406 transactions",
+                "code": f"# Group by make -> count rows -> sort descending\ntx_by_make = (\n    df.groupby('make')\n    .size()\n    .reset_index(name='transactions')\n    .sort_values('transactions', ascending=False)\n)\n# Top result: {top_make['make']} — {int(top_make['transactions']):,} transactions",
             },
             "time_summary": {
                 "description": "Aggregate transaction counts by year-month to reveal seasonal patterns and volume trends over time.",
-                "code": "# Group by year + month for time-series granularity\ntx_by_month = (\n    df.groupby(['sale_year', 'sale_month'])\n    .size()\n    .reset_index(name='transactions')\n)\n# Produces rows like: 2015-01 | 8,045 transactions",
+                "code": f"# Group by year + month for time-series granularity\ntx_by_month = (\n    df.groupby(['sale_year', 'sale_month'])\n    .size()\n    .reset_index(name='transactions')\n)\n# Peak row: {monthly_peak['year_month']} | {int(monthly_peak['transactions']):,} transactions",
             },
             "additional_summary": {
                 "description": "Calculate how much each make sells above or below its Manheim Market Report (MMR) value on average. Positive = sellers get more than market estimate.",
