@@ -57,7 +57,7 @@ function buildFilters(data) {
   const makeFilter = document.querySelector("#make-filter");
   const yearFilter = document.querySelector("#year-filter");
 
-  const makes = ["All", ...data.top_makes.map((d) => d.make)];
+  const makes = ["All", ...[...new Set(data.transactions_by_make_year.map((d) => d.make))].sort()];
   const years = ["All", ...uniqueSorted(data.transactions_by_year.map((d) => Number(d.sale_year)))];
 
   makeFilter.innerHTML = makes.map((make) => `<option value="${make}">${make}</option>`).join("");
@@ -74,18 +74,95 @@ function getMakeYearTransactions(data, selectedMake, selectedYear) {
   });
 }
 
+function groupAndSortTransactions(rows, keyName) {
+  const grouped = rows.reduce((acc, row) => {
+    const key = row[keyName];
+    acc[key] = (acc[key] || 0) + Number(row.transactions);
+    return acc;
+  }, {});
+  return Object.entries(grouped)
+    .map(([key, transactions]) => ({ [keyName]: key, transactions }))
+    .sort((a, b) => b.transactions - a.transactions);
+}
+
+function getScopedMakeTransactions(data, selectedMake, selectedYear) {
+  const filtered = getMakeYearTransactions(data, selectedMake, selectedYear);
+  if (selectedMake !== "All") {
+    return groupAndSortTransactions(filtered, "make");
+  }
+  return groupAndSortTransactions(filtered, "make").slice(0, 15);
+}
+
+function getScopedMonthlyTransactions(data, selectedMake, selectedYear) {
+  if (selectedMake === "All" && selectedYear === "All") {
+    return data.transactions_by_month;
+  }
+  const filtered = data.transactions_by_make_month.filter((row) => {
+    const makeOk = selectedMake === "All" || row.make === selectedMake;
+    const yearOk = selectedYear === "All" || Number(row.sale_year) === Number(selectedYear);
+    return makeOk && yearOk;
+  });
+  return groupAndSortTransactions(filtered, "year_month").sort((a, b) => a.year_month.localeCompare(b.year_month));
+}
+
+function getScopedMetricByMake(data, selectedMake, selectedYear, metricKey, allYearsRows, byYearRows) {
+  let rows = selectedYear === "All"
+    ? allYearsRows
+    : byYearRows.filter((row) => Number(row.sale_year) === Number(selectedYear));
+
+  if (selectedMake !== "All") {
+    rows = rows.filter((row) => row.make === selectedMake);
+  } else {
+    rows = rows.slice().sort((a, b) => Number(b[metricKey]) - Number(a[metricKey])).slice(0, 15);
+  }
+
+  return rows;
+}
+
+function getKpiMetric(data, selectedMake, selectedYear, metricKey, allYearsByMake, byYearByMake, byYearOverall, fallback) {
+  if (selectedMake === "All" && selectedYear === "All") {
+    return fallback;
+  }
+  if (selectedMake === "All" && selectedYear !== "All") {
+    const row = byYearOverall.find((r) => Number(r.sale_year) === Number(selectedYear));
+    return row ? Number(row[metricKey]) : fallback;
+  }
+  if (selectedMake !== "All" && selectedYear === "All") {
+    const row = allYearsByMake.find((r) => r.make === selectedMake);
+    return row ? Number(row[metricKey]) : fallback;
+  }
+  const row = byYearByMake.find((r) => r.make === selectedMake && Number(r.sale_year) === Number(selectedYear));
+  return row ? Number(row[metricKey]) : fallback;
+}
+
 function renderDashboardKpis(data, selectedMake, selectedYear) {
   const scoped = getMakeYearTransactions(data, selectedMake, selectedYear);
   const scopedTx = scoped.reduce((sum, row) => sum + Number(row.transactions), 0);
 
-  const makePrice = data.avg_price_by_make.find((row) => row.make === selectedMake);
-  const makeVsMmr = data.price_vs_mmr_by_make.find((row) => row.make === selectedMake);
-
-  const avgPrice = selectedMake === "All" ? data.summary.kpis.average_sellingprice : (makePrice?.avg_sellingprice ?? data.summary.kpis.average_sellingprice);
-  const avgVsMmr = selectedMake === "All" ? data.summary.kpis.average_price_vs_mmr : (makeVsMmr?.avg_price_vs_mmr ?? data.summary.kpis.average_price_vs_mmr);
+  const avgPrice = getKpiMetric(
+    data,
+    selectedMake,
+    selectedYear,
+    "avg_sellingprice",
+    data.avg_price_by_make,
+    data.avg_price_by_make_year,
+    data.avg_price_by_year,
+    data.summary.kpis.average_sellingprice
+  );
+  const avgVsMmr = getKpiMetric(
+    data,
+    selectedMake,
+    selectedYear,
+    "avg_price_vs_mmr",
+    data.price_vs_mmr_by_make,
+    data.price_vs_mmr_by_make_year,
+    data.price_vs_mmr_by_year,
+    data.summary.kpis.average_price_vs_mmr
+  );
+  const txValue = selectedMake === "All" && selectedYear === "All" ? data.summary.dataset.rows : scopedTx;
 
   document.querySelector("#dashboard-kpis").innerHTML = [
-    createKpi("Filtered Transactions", number.format(scopedTx || data.summary.dataset.rows)),
+    createKpi("Filtered Transactions", number.format(txValue)),
     createKpi("Average Selling Price", money.format(avgPrice)),
     createKpi("Average Price vs MMR", `${avgVsMmr >= 0 ? "+" : ""}${money.format(avgVsMmr)}`),
     createKpi("Average Car Age", `${data.summary.kpis.average_car_age_at_sale.toFixed(1)} years`),
@@ -93,11 +170,25 @@ function renderDashboardKpis(data, selectedMake, selectedYear) {
 }
 
 function renderCharts(data, selectedMake, selectedYear) {
-  const topMakes = data.top_makes;
-  const monthly = data.transactions_by_month;
-  const prices = data.avg_price_by_make;
+  const topMakes = getScopedMakeTransactions(data, selectedMake, selectedYear);
+  const monthly = getScopedMonthlyTransactions(data, selectedMake, selectedYear);
+  const prices = getScopedMetricByMake(
+    data,
+    selectedMake,
+    selectedYear,
+    "avg_sellingprice",
+    data.avg_price_by_make,
+    data.avg_price_by_make_year
+  );
   // Filter outliers: exclude entries where value is >5x the second-largest absolute value
-  const rawVsMmr = data.price_vs_mmr_by_make;
+  const rawVsMmr = getScopedMetricByMake(
+    data,
+    selectedMake,
+    selectedYear,
+    "avg_price_vs_mmr",
+    data.price_vs_mmr_by_make,
+    data.price_vs_mmr_by_make_year
+  );
   const absValues = rawVsMmr.map((d) => Math.abs(d.avg_price_vs_mmr)).sort((a, b) => b - a);
   const outlierThreshold = absValues.length > 1 ? absValues[1] * 5 : Infinity;
   const vsMmr = rawVsMmr.filter((d) => Math.abs(d.avg_price_vs_mmr) <= outlierThreshold);
