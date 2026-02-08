@@ -1,0 +1,24 @@
+{
+  "dataset": {
+    "name": "car_prices.csv",
+    "rows": 558837,
+    "columns": 16,
+    "valid_price_rows": 558825,
+    "valid_date_rows": 558799
+  },
+  "kpis": {
+    "average_sellingprice": 13611.358810003132,
+    "average_price_vs_mmr": -158.02119903578927,
+    "average_car_age_at_sale": 4.865223452439965,
+    "top_make": "FORD",
+    "top_make_transactions": 93997,
+    "top_body": "SEDAN",
+    "top_body_transactions": 241343,
+    "top_state": "FL",
+    "top_state_transactions": 82945,
+    "peak_year": 2015,
+    "peak_year_transactions": 505074,
+    "peak_month": "2015-02",
+    "peak_month_transactions": 163052
+  }
+}
