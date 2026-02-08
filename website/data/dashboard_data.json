@@ -958,6 +958,2576 @@
       "transactions": 20
     }
   ],
+  "transactions_by_make_month": [
+    {
+      "make": "ACURA",
+      "sale_year": 2014.0,
+      "year_month": "2014-01",
+      "transactions": 1
+    },
+    {
+      "make": "ACURA",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 725
+    },
+    {
+      "make": "ACURA",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 1760
+    },
+    {
+      "make": "ACURA",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 1617
+    },
+    {
+      "make": "ACURA",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 381
+    },
+    {
+      "make": "ACURA",
+      "sale_year": 2015.0,
+      "year_month": "2015-04",
+      "transactions": 4
+    },
+    {
+      "make": "ACURA",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 525
+    },
+    {
+      "make": "ACURA",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 902
+    },
+    {
+      "make": "ACURA",
+      "sale_year": 2015.0,
+      "year_month": "2015-07",
+      "transactions": 11
+    },
+    {
+      "make": "AIRSTREAM",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 1
+    },
+    {
+      "make": "ASTON MARTIN",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 7
+    },
+    {
+      "make": "ASTON MARTIN",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 8
+    },
+    {
+      "make": "ASTON MARTIN",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 3
+    },
+    {
+      "make": "ASTON MARTIN",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 7
+    },
+    {
+      "make": "AUDI",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 581
+    },
+    {
+      "make": "AUDI",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 1510
+    },
+    {
+      "make": "AUDI",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 1601
+    },
+    {
+      "make": "AUDI",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 330
+    },
+    {
+      "make": "AUDI",
+      "sale_year": 2015.0,
+      "year_month": "2015-04",
+      "transactions": 8
+    },
+    {
+      "make": "AUDI",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 652
+    },
+    {
+      "make": "AUDI",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 1180
+    },
+    {
+      "make": "AUDI",
+      "sale_year": 2015.0,
+      "year_month": "2015-07",
+      "transactions": 15
+    },
+    {
+      "make": "BENTLEY",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 18
+    },
+    {
+      "make": "BENTLEY",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 30
+    },
+    {
+      "make": "BENTLEY",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 21
+    },
+    {
+      "make": "BENTLEY",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 3
+    },
+    {
+      "make": "BENTLEY",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 15
+    },
+    {
+      "make": "BENTLEY",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 28
+    },
+    {
+      "make": "BENTLEY",
+      "sale_year": 2015.0,
+      "year_month": "2015-07",
+      "transactions": 1
+    },
+    {
+      "make": "BMW",
+      "sale_year": 2014.0,
+      "year_month": "2014-01",
+      "transactions": 3
+    },
+    {
+      "make": "BMW",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 2125
+    },
+    {
+      "make": "BMW",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 5191
+    },
+    {
+      "make": "BMW",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 5822
+    },
+    {
+      "make": "BMW",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 1258
+    },
+    {
+      "make": "BMW",
+      "sale_year": 2015.0,
+      "year_month": "2015-04",
+      "transactions": 67
+    },
+    {
+      "make": "BMW",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 2089
+    },
+    {
+      "make": "BMW",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 4145
+    },
+    {
+      "make": "BMW",
+      "sale_year": 2015.0,
+      "year_month": "2015-07",
+      "transactions": 93
+    },
+    {
+      "make": "BUICK",
+      "sale_year": 2014.0,
+      "year_month": "2014-01",
+      "transactions": 2
+    },
+    {
+      "make": "BUICK",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 548
+    },
+    {
+      "make": "BUICK",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 1212
+    },
+    {
+      "make": "BUICK",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 1436
+    },
+    {
+      "make": "BUICK",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 468
+    },
+    {
+      "make": "BUICK",
+      "sale_year": 2015.0,
+      "year_month": "2015-04",
+      "transactions": 17
+    },
+    {
+      "make": "BUICK",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 495
+    },
+    {
+      "make": "BUICK",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 929
+    },
+    {
+      "make": "BUICK",
+      "sale_year": 2015.0,
+      "year_month": "2015-07",
+      "transactions": 14
+    },
+    {
+      "make": "CADILLAC",
+      "sale_year": 2014.0,
+      "year_month": "2014-01",
+      "transactions": 3
+    },
+    {
+      "make": "CADILLAC",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 948
+    },
+    {
+      "make": "CADILLAC",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 2019
+    },
+    {
+      "make": "CADILLAC",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 2157
+    },
+    {
+      "make": "CADILLAC",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 615
+    },
+    {
+      "make": "CADILLAC",
+      "sale_year": 2015.0,
+      "year_month": "2015-04",
+      "transactions": 21
+    },
+    {
+      "make": "CADILLAC",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 716
+    },
+    {
+      "make": "CADILLAC",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 1131
+    },
+    {
+      "make": "CADILLAC",
+      "sale_year": 2015.0,
+      "year_month": "2015-07",
+      "transactions": 19
+    },
+    {
+      "make": "CHEV TRUCK",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 1
+    },
+    {
+      "make": "CHEVROLET",
+      "sale_year": 2014.0,
+      "year_month": "2014-01",
+      "transactions": 14
+    },
+    {
+      "make": "CHEVROLET",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 6244
+    },
+    {
+      "make": "CHEVROLET",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 14789
+    },
+    {
+      "make": "CHEVROLET",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 18259
+    },
+    {
+      "make": "CHEVROLET",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 5467
+    },
+    {
+      "make": "CHEVROLET",
+      "sale_year": 2015.0,
+      "year_month": "2015-04",
+      "transactions": 174
+    },
+    {
+      "make": "CHEVROLET",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 5549
+    },
+    {
+      "make": "CHEVROLET",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 9987
+    },
+    {
+      "make": "CHEVROLET",
+      "sale_year": 2015.0,
+      "year_month": "2015-07",
+      "transactions": 104
+    },
+    {
+      "make": "CHRYSLER",
+      "sale_year": 2014.0,
+      "year_month": "2014-01",
+      "transactions": 4
+    },
+    {
+      "make": "CHRYSLER",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 1690
+    },
+    {
+      "make": "CHRYSLER",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 4412
+    },
+    {
+      "make": "CHRYSLER",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 5120
+    },
+    {
+      "make": "CHRYSLER",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 1505
+    },
+    {
+      "make": "CHRYSLER",
+      "sale_year": 2015.0,
+      "year_month": "2015-04",
+      "transactions": 49
+    },
+    {
+      "make": "CHRYSLER",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 1552
+    },
+    {
+      "make": "CHRYSLER",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 3114
+    },
+    {
+      "make": "CHRYSLER",
+      "sale_year": 2015.0,
+      "year_month": "2015-07",
+      "transactions": 37
+    },
+    {
+      "make": "DAEWOO",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 1
+    },
+    {
+      "make": "DAEWOO",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 1
+    },
+    {
+      "make": "DAEWOO",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 1
+    },
+    {
+      "make": "DODGE",
+      "sale_year": 2014.0,
+      "year_month": "2014-01",
+      "transactions": 6
+    },
+    {
+      "make": "DODGE",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 3003
+    },
+    {
+      "make": "DODGE",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 7970
+    },
+    {
+      "make": "DODGE",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 9272
+    },
+    {
+      "make": "DODGE",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 2611
+    },
+    {
+      "make": "DODGE",
+      "sale_year": 2015.0,
+      "year_month": "2015-04",
+      "transactions": 77
+    },
+    {
+      "make": "DODGE",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 2775
+    },
+    {
+      "make": "DODGE",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 5164
+    },
+    {
+      "make": "DODGE",
+      "sale_year": 2015.0,
+      "year_month": "2015-07",
+      "transactions": 75
+    },
+    {
+      "make": "DODGE TK",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 1
+    },
+    {
+      "make": "DOT",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 1
+    },
+    {
+      "make": "FERRARI",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 3
+    },
+    {
+      "make": "FERRARI",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 3
+    },
+    {
+      "make": "FERRARI",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 1
+    },
+    {
+      "make": "FERRARI",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 4
+    },
+    {
+      "make": "FERRARI",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 8
+    },
+    {
+      "make": "FIAT",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 47
+    },
+    {
+      "make": "FIAT",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 206
+    },
+    {
+      "make": "FIAT",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 251
+    },
+    {
+      "make": "FIAT",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 70
+    },
+    {
+      "make": "FIAT",
+      "sale_year": 2015.0,
+      "year_month": "2015-04",
+      "transactions": 1
+    },
+    {
+      "make": "FIAT",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 105
+    },
+    {
+      "make": "FIAT",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 184
+    },
+    {
+      "make": "FIAT",
+      "sale_year": 2015.0,
+      "year_month": "2015-07",
+      "transactions": 1
+    },
+    {
+      "make": "FISKER",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 1
+    },
+    {
+      "make": "FISKER",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 4
+    },
+    {
+      "make": "FISKER",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 1
+    },
+    {
+      "make": "FISKER",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 3
+    },
+    {
+      "make": "FORD",
+      "sale_year": 2014.0,
+      "year_month": "2014-01",
+      "transactions": 112
+    },
+    {
+      "make": "FORD",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 7643
+    },
+    {
+      "make": "FORD",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 24080
+    },
+    {
+      "make": "FORD",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 28057
+    },
+    {
+      "make": "FORD",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 8400
+    },
+    {
+      "make": "FORD",
+      "sale_year": 2015.0,
+      "year_month": "2015-04",
+      "transactions": 278
+    },
+    {
+      "make": "FORD",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 9078
+    },
+    {
+      "make": "FORD",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 16056
+    },
+    {
+      "make": "FORD",
+      "sale_year": 2015.0,
+      "year_month": "2015-07",
+      "transactions": 292
+    },
+    {
+      "make": "FORD TK",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 1
+    },
+    {
+      "make": "FORD TRUCK",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 1
+    },
+    {
+      "make": "FORD TRUCK",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 2
+    },
+    {
+      "make": "GEO",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 1
+    },
+    {
+      "make": "GEO",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 8
+    },
+    {
+      "make": "GEO",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 6
+    },
+    {
+      "make": "GEO",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 3
+    },
+    {
+      "make": "GEO",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 1
+    },
+    {
+      "make": "GMC",
+      "sale_year": 2014.0,
+      "year_month": "2014-01",
+      "transactions": 1
+    },
+    {
+      "make": "GMC",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 1021
+    },
+    {
+      "make": "GMC",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 2510
+    },
+    {
+      "make": "GMC",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 3085
+    },
+    {
+      "make": "GMC",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 876
+    },
+    {
+      "make": "GMC",
+      "sale_year": 2015.0,
+      "year_month": "2015-04",
+      "transactions": 18
+    },
+    {
+      "make": "GMC",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 1152
+    },
+    {
+      "make": "GMC",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 1956
+    },
+    {
+      "make": "GMC",
+      "sale_year": 2015.0,
+      "year_month": "2015-07",
+      "transactions": 19
+    },
+    {
+      "make": "GMC TRUCK",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 6
+    },
+    {
+      "make": "GMC TRUCK",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 5
+    },
+    {
+      "make": "HONDA",
+      "sale_year": 2014.0,
+      "year_month": "2014-01",
+      "transactions": 6
+    },
+    {
+      "make": "HONDA",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 3496
+    },
+    {
+      "make": "HONDA",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 7805
+    },
+    {
+      "make": "HONDA",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 7843
+    },
+    {
+      "make": "HONDA",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 1806
+    },
+    {
+      "make": "HONDA",
+      "sale_year": 2015.0,
+      "year_month": "2015-04",
+      "transactions": 64
+    },
+    {
+      "make": "HONDA",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 2199
+    },
+    {
+      "make": "HONDA",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 4084
+    },
+    {
+      "make": "HONDA",
+      "sale_year": 2015.0,
+      "year_month": "2015-07",
+      "transactions": 48
+    },
+    {
+      "make": "HUMMER",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 70
+    },
+    {
+      "make": "HUMMER",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 222
+    },
+    {
+      "make": "HUMMER",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 220
+    },
+    {
+      "make": "HUMMER",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 78
+    },
+    {
+      "make": "HUMMER",
+      "sale_year": 2015.0,
+      "year_month": "2015-04",
+      "transactions": 2
+    },
+    {
+      "make": "HUMMER",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 70
+    },
+    {
+      "make": "HUMMER",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 138
+    },
+    {
+      "make": "HUMMER",
+      "sale_year": 2015.0,
+      "year_month": "2015-07",
+      "transactions": 5
+    },
+    {
+      "make": "HYUNDAI",
+      "sale_year": 2014.0,
+      "year_month": "2014-01",
+      "transactions": 11
+    },
+    {
+      "make": "HYUNDAI",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 2074
+    },
+    {
+      "make": "HYUNDAI",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 5336
+    },
+    {
+      "make": "HYUNDAI",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 6159
+    },
+    {
+      "make": "HYUNDAI",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 1899
+    },
+    {
+      "make": "HYUNDAI",
+      "sale_year": 2015.0,
+      "year_month": "2015-04",
+      "transactions": 50
+    },
+    {
+      "make": "HYUNDAI",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 2039
+    },
+    {
+      "make": "HYUNDAI",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 4232
+    },
+    {
+      "make": "HYUNDAI",
+      "sale_year": 2015.0,
+      "year_month": "2015-07",
+      "transactions": 31
+    },
+    {
+      "make": "HYUNDAI TK",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 1
+    },
+    {
+      "make": "INFINITI",
+      "sale_year": 2014.0,
+      "year_month": "2014-01",
+      "transactions": 2
+    },
+    {
+      "make": "INFINITI",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 1301
+    },
+    {
+      "make": "INFINITI",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 3892
+    },
+    {
+      "make": "INFINITI",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 4406
+    },
+    {
+      "make": "INFINITI",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 1209
+    },
+    {
+      "make": "INFINITI",
+      "sale_year": 2015.0,
+      "year_month": "2015-04",
+      "transactions": 20
+    },
+    {
+      "make": "INFINITI",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 1314
+    },
+    {
+      "make": "INFINITI",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 3126
+    },
+    {
+      "make": "INFINITI",
+      "sale_year": 2015.0,
+      "year_month": "2015-07",
+      "transactions": 35
+    },
+    {
+      "make": "ISUZU",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 28
+    },
+    {
+      "make": "ISUZU",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 43
+    },
+    {
+      "make": "ISUZU",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 71
+    },
+    {
+      "make": "ISUZU",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 19
+    },
+    {
+      "make": "ISUZU",
+      "sale_year": 2015.0,
+      "year_month": "2015-04",
+      "transactions": 2
+    },
+    {
+      "make": "ISUZU",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 15
+    },
+    {
+      "make": "ISUZU",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 26
+    },
+    {
+      "make": "JAGUAR",
+      "sale_year": 2014.0,
+      "year_month": "2014-01",
+      "transactions": 2
+    },
+    {
+      "make": "JAGUAR",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 165
+    },
+    {
+      "make": "JAGUAR",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 361
+    },
+    {
+      "make": "JAGUAR",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 373
+    },
+    {
+      "make": "JAGUAR",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 95
+    },
+    {
+      "make": "JAGUAR",
+      "sale_year": 2015.0,
+      "year_month": "2015-04",
+      "transactions": 2
+    },
+    {
+      "make": "JAGUAR",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 137
+    },
+    {
+      "make": "JAGUAR",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 282
+    },
+    {
+      "make": "JAGUAR",
+      "sale_year": 2015.0,
+      "year_month": "2015-07",
+      "transactions": 3
+    },
+    {
+      "make": "JEEP",
+      "sale_year": 2014.0,
+      "year_month": "2014-01",
+      "transactions": 1
+    },
+    {
+      "make": "JEEP",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 1508
+    },
+    {
+      "make": "JEEP",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 3931
+    },
+    {
+      "make": "JEEP",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 4484
+    },
+    {
+      "make": "JEEP",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 1279
+    },
+    {
+      "make": "JEEP",
+      "sale_year": 2015.0,
+      "year_month": "2015-04",
+      "transactions": 39
+    },
+    {
+      "make": "JEEP",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 1398
+    },
+    {
+      "make": "JEEP",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 2810
+    },
+    {
+      "make": "JEEP",
+      "sale_year": 2015.0,
+      "year_month": "2015-07",
+      "transactions": 33
+    },
+    {
+      "make": "KIA",
+      "sale_year": 2014.0,
+      "year_month": "2014-01",
+      "transactions": 2
+    },
+    {
+      "make": "KIA",
+      "sale_year": 2014.0,
+      "year_month": "2014-02",
+      "transactions": 1
+    },
+    {
+      "make": "KIA",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 1474
+    },
+    {
+      "make": "KIA",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 4470
+    },
+    {
+      "make": "KIA",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 5557
+    },
+    {
+      "make": "KIA",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 1449
+    },
+    {
+      "make": "KIA",
+      "sale_year": 2015.0,
+      "year_month": "2015-04",
+      "transactions": 29
+    },
+    {
+      "make": "KIA",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 1461
+    },
+    {
+      "make": "KIA",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 3615
+    },
+    {
+      "make": "KIA",
+      "sale_year": 2015.0,
+      "year_month": "2015-07",
+      "transactions": 24
+    },
+    {
+      "make": "LAMBORGHINI",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 2
+    },
+    {
+      "make": "LAMBORGHINI",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 1
+    },
+    {
+      "make": "LAMBORGHINI",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 1
+    },
+    {
+      "make": "LAND ROVER",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 227
+    },
+    {
+      "make": "LAND ROVER",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 476
+    },
+    {
+      "make": "LAND ROVER",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 439
+    },
+    {
+      "make": "LAND ROVER",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 97
+    },
+    {
+      "make": "LAND ROVER",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 224
+    },
+    {
+      "make": "LAND ROVER",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 390
+    },
+    {
+      "make": "LAND ROVER",
+      "sale_year": 2015.0,
+      "year_month": "2015-07",
+      "transactions": 11
+    },
+    {
+      "make": "LANDROVER",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 20
+    },
+    {
+      "make": "LANDROVER",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 7
+    },
+    {
+      "make": "LEXUS",
+      "sale_year": 2014.0,
+      "year_month": "2014-01",
+      "transactions": 1
+    },
+    {
+      "make": "LEXUS",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 1130
+    },
+    {
+      "make": "LEXUS",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 3185
+    },
+    {
+      "make": "LEXUS",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 3399
+    },
+    {
+      "make": "LEXUS",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 929
+    },
+    {
+      "make": "LEXUS",
+      "sale_year": 2015.0,
+      "year_month": "2015-04",
+      "transactions": 16
+    },
+    {
+      "make": "LEXUS",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 997
+    },
+    {
+      "make": "LEXUS",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 2282
+    },
+    {
+      "make": "LEXUS",
+      "sale_year": 2015.0,
+      "year_month": "2015-07",
+      "transactions": 41
+    },
+    {
+      "make": "LINCOLN",
+      "sale_year": 2014.0,
+      "year_month": "2014-01",
+      "transactions": 5
+    },
+    {
+      "make": "LINCOLN",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 470
+    },
+    {
+      "make": "LINCOLN",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 1594
+    },
+    {
+      "make": "LINCOLN",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 1629
+    },
+    {
+      "make": "LINCOLN",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 478
+    },
+    {
+      "make": "LINCOLN",
+      "sale_year": 2015.0,
+      "year_month": "2015-04",
+      "transactions": 7
+    },
+    {
+      "make": "LINCOLN",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 604
+    },
+    {
+      "make": "LINCOLN",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 988
+    },
+    {
+      "make": "LINCOLN",
+      "sale_year": 2015.0,
+      "year_month": "2015-07",
+      "transactions": 11
+    },
+    {
+      "make": "LOTUS",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 1
+    },
+    {
+      "make": "MASERATI",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 11
+    },
+    {
+      "make": "MASERATI",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 26
+    },
+    {
+      "make": "MASERATI",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 41
+    },
+    {
+      "make": "MASERATI",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 3
+    },
+    {
+      "make": "MASERATI",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 18
+    },
+    {
+      "make": "MASERATI",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 36
+    },
+    {
+      "make": "MASERATI",
+      "sale_year": 2015.0,
+      "year_month": "2015-07",
+      "transactions": 1
+    },
+    {
+      "make": "MAZDA",
+      "sale_year": 2014.0,
+      "year_month": "2014-01",
+      "transactions": 1
+    },
+    {
+      "make": "MAZDA",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 968
+    },
+    {
+      "make": "MAZDA",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 2199
+    },
+    {
+      "make": "MAZDA",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 2566
+    },
+    {
+      "make": "MAZDA",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 734
+    },
+    {
+      "make": "MAZDA",
+      "sale_year": 2015.0,
+      "year_month": "2015-04",
+      "transactions": 17
+    },
+    {
+      "make": "MAZDA",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 667
+    },
+    {
+      "make": "MAZDA",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 1347
+    },
+    {
+      "make": "MAZDA",
+      "sale_year": 2015.0,
+      "year_month": "2015-07",
+      "transactions": 9
+    },
+    {
+      "make": "MAZDA TK",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 1
+    },
+    {
+      "make": "MERCEDES",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 44
+    },
+    {
+      "make": "MERCEDES",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 26
+    },
+    {
+      "make": "MERCEDES-B",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 1
+    },
+    {
+      "make": "MERCEDES-B",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 1
+    },
+    {
+      "make": "MERCEDES-BENZ",
+      "sale_year": 2014.0,
+      "year_month": "2014-01",
+      "transactions": 2
+    },
+    {
+      "make": "MERCEDES-BENZ",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 1787
+    },
+    {
+      "make": "MERCEDES-BENZ",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 4170
+    },
+    {
+      "make": "MERCEDES-BENZ",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 4900
+    },
+    {
+      "make": "MERCEDES-BENZ",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 1094
+    },
+    {
+      "make": "MERCEDES-BENZ",
+      "sale_year": 2015.0,
+      "year_month": "2015-04",
+      "transactions": 31
+    },
+    {
+      "make": "MERCEDES-BENZ",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 1824
+    },
+    {
+      "make": "MERCEDES-BENZ",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 3273
+    },
+    {
+      "make": "MERCEDES-BENZ",
+      "sale_year": 2015.0,
+      "year_month": "2015-07",
+      "transactions": 60
+    },
+    {
+      "make": "MERCURY",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 271
+    },
+    {
+      "make": "MERCURY",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 562
+    },
+    {
+      "make": "MERCURY",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 582
+    },
+    {
+      "make": "MERCURY",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 166
+    },
+    {
+      "make": "MERCURY",
+      "sale_year": 2015.0,
+      "year_month": "2015-04",
+      "transactions": 12
+    },
+    {
+      "make": "MERCURY",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 166
+    },
+    {
+      "make": "MERCURY",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 263
+    },
+    {
+      "make": "MERCURY",
+      "sale_year": 2015.0,
+      "year_month": "2015-07",
+      "transactions": 1
+    },
+    {
+      "make": "MINI",
+      "sale_year": 2014.0,
+      "year_month": "2014-01",
+      "transactions": 1
+    },
+    {
+      "make": "MINI",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 296
+    },
+    {
+      "make": "MINI",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 796
+    },
+    {
+      "make": "MINI",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 930
+    },
+    {
+      "make": "MINI",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 224
+    },
+    {
+      "make": "MINI",
+      "sale_year": 2015.0,
+      "year_month": "2015-04",
+      "transactions": 3
+    },
+    {
+      "make": "MINI",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 315
+    },
+    {
+      "make": "MINI",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 652
+    },
+    {
+      "make": "MINI",
+      "sale_year": 2015.0,
+      "year_month": "2015-07",
+      "transactions": 7
+    },
+    {
+      "make": "MITSUBISHI",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 539
+    },
+    {
+      "make": "MITSUBISHI",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 1066
+    },
+    {
+      "make": "MITSUBISHI",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 1253
+    },
+    {
+      "make": "MITSUBISHI",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 333
+    },
+    {
+      "make": "MITSUBISHI",
+      "sale_year": 2015.0,
+      "year_month": "2015-04",
+      "transactions": 14
+    },
+    {
+      "make": "MITSUBISHI",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 378
+    },
+    {
+      "make": "MITSUBISHI",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 665
+    },
+    {
+      "make": "MITSUBISHI",
+      "sale_year": 2015.0,
+      "year_month": "2015-07",
+      "transactions": 9
+    },
+    {
+      "make": "NISSAN",
+      "sale_year": 2014.0,
+      "year_month": "2014-01",
+      "transactions": 8
+    },
+    {
+      "make": "NISSAN",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 4699
+    },
+    {
+      "make": "NISSAN",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 12905
+    },
+    {
+      "make": "NISSAN",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 15209
+    },
+    {
+      "make": "NISSAN",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 4962
+    },
+    {
+      "make": "NISSAN",
+      "sale_year": 2015.0,
+      "year_month": "2015-04",
+      "transactions": 198
+    },
+    {
+      "make": "NISSAN",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 5465
+    },
+    {
+      "make": "NISSAN",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 10461
+    },
+    {
+      "make": "NISSAN",
+      "sale_year": 2015.0,
+      "year_month": "2015-07",
+      "transactions": 110
+    },
+    {
+      "make": "OLDSMOBILE",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 72
+    },
+    {
+      "make": "OLDSMOBILE",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 99
+    },
+    {
+      "make": "OLDSMOBILE",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 111
+    },
+    {
+      "make": "OLDSMOBILE",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 29
+    },
+    {
+      "make": "OLDSMOBILE",
+      "sale_year": 2015.0,
+      "year_month": "2015-04",
+      "transactions": 4
+    },
+    {
+      "make": "OLDSMOBILE",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 26
+    },
+    {
+      "make": "OLDSMOBILE",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 43
+    },
+    {
+      "make": "PLYMOUTH",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 10
+    },
+    {
+      "make": "PLYMOUTH",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 6
+    },
+    {
+      "make": "PLYMOUTH",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 5
+    },
+    {
+      "make": "PLYMOUTH",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 3
+    },
+    {
+      "make": "PLYMOUTH",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 3
+    },
+    {
+      "make": "PONTIAC",
+      "sale_year": 2014.0,
+      "year_month": "2014-01",
+      "transactions": 2
+    },
+    {
+      "make": "PONTIAC",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 671
+    },
+    {
+      "make": "PONTIAC",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 1173
+    },
+    {
+      "make": "PONTIAC",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 1338
+    },
+    {
+      "make": "PONTIAC",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 403
+    },
+    {
+      "make": "PONTIAC",
+      "sale_year": 2015.0,
+      "year_month": "2015-04",
+      "transactions": 17
+    },
+    {
+      "make": "PONTIAC",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 380
+    },
+    {
+      "make": "PONTIAC",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 539
+    },
+    {
+      "make": "PONTIAC",
+      "sale_year": 2015.0,
+      "year_month": "2015-07",
+      "transactions": 1
+    },
+    {
+      "make": "PORSCHE",
+      "sale_year": 2014.0,
+      "year_month": "2014-01",
+      "transactions": 1
+    },
+    {
+      "make": "PORSCHE",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 143
+    },
+    {
+      "make": "PORSCHE",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 257
+    },
+    {
+      "make": "PORSCHE",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 334
+    },
+    {
+      "make": "PORSCHE",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 70
+    },
+    {
+      "make": "PORSCHE",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 167
+    },
+    {
+      "make": "PORSCHE",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 423
+    },
+    {
+      "make": "PORSCHE",
+      "sale_year": 2015.0,
+      "year_month": "2015-07",
+      "transactions": 7
+    },
+    {
+      "make": "RAM",
+      "sale_year": 2014.0,
+      "year_month": "2014-01",
+      "transactions": 1
+    },
+    {
+      "make": "RAM",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 315
+    },
+    {
+      "make": "RAM",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 1050
+    },
+    {
+      "make": "RAM",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 1394
+    },
+    {
+      "make": "RAM",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 389
+    },
+    {
+      "make": "RAM",
+      "sale_year": 2015.0,
+      "year_month": "2015-04",
+      "transactions": 7
+    },
+    {
+      "make": "RAM",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 464
+    },
+    {
+      "make": "RAM",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 936
+    },
+    {
+      "make": "RAM",
+      "sale_year": 2015.0,
+      "year_month": "2015-07",
+      "transactions": 18
+    },
+    {
+      "make": "ROLLS-ROYCE",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 1
+    },
+    {
+      "make": "ROLLS-ROYCE",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 3
+    },
+    {
+      "make": "ROLLS-ROYCE",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 3
+    },
+    {
+      "make": "ROLLS-ROYCE",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 4
+    },
+    {
+      "make": "ROLLS-ROYCE",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 6
+    },
+    {
+      "make": "SAAB",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 72
+    },
+    {
+      "make": "SAAB",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 145
+    },
+    {
+      "make": "SAAB",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 126
+    },
+    {
+      "make": "SAAB",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 44
+    },
+    {
+      "make": "SAAB",
+      "sale_year": 2015.0,
+      "year_month": "2015-04",
+      "transactions": 2
+    },
+    {
+      "make": "SAAB",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 36
+    },
+    {
+      "make": "SAAB",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 58
+    },
+    {
+      "make": "SAAB",
+      "sale_year": 2015.0,
+      "year_month": "2015-07",
+      "transactions": 1
+    },
+    {
+      "make": "SATURN",
+      "sale_year": 2014.0,
+      "year_month": "2014-01",
+      "transactions": 1
+    },
+    {
+      "make": "SATURN",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 444
+    },
+    {
+      "make": "SATURN",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 668
+    },
+    {
+      "make": "SATURN",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 842
+    },
+    {
+      "make": "SATURN",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 276
+    },
+    {
+      "make": "SATURN",
+      "sale_year": 2015.0,
+      "year_month": "2015-04",
+      "transactions": 17
+    },
+    {
+      "make": "SATURN",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 237
+    },
+    {
+      "make": "SATURN",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 352
+    },
+    {
+      "make": "SATURN",
+      "sale_year": 2015.0,
+      "year_month": "2015-07",
+      "transactions": 4
+    },
+    {
+      "make": "SCION",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 204
+    },
+    {
+      "make": "SCION",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 388
+    },
+    {
+      "make": "SCION",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 450
+    },
+    {
+      "make": "SCION",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 139
+    },
+    {
+      "make": "SCION",
+      "sale_year": 2015.0,
+      "year_month": "2015-04",
+      "transactions": 4
+    },
+    {
+      "make": "SCION",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 143
+    },
+    {
+      "make": "SCION",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 356
+    },
+    {
+      "make": "SCION",
+      "sale_year": 2015.0,
+      "year_month": "2015-07",
+      "transactions": 3
+    },
+    {
+      "make": "SMART",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 39
+    },
+    {
+      "make": "SMART",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 61
+    },
+    {
+      "make": "SMART",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 69
+    },
+    {
+      "make": "SMART",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 23
+    },
+    {
+      "make": "SMART",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 67
+    },
+    {
+      "make": "SMART",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 136
+    },
+    {
+      "make": "SMART",
+      "sale_year": 2015.0,
+      "year_month": "2015-07",
+      "transactions": 1
+    },
+    {
+      "make": "SUBARU",
+      "sale_year": 2014.0,
+      "year_month": "2014-01",
+      "transactions": 1
+    },
+    {
+      "make": "SUBARU",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 455
+    },
+    {
+      "make": "SUBARU",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 1570
+    },
+    {
+      "make": "SUBARU",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 1506
+    },
+    {
+      "make": "SUBARU",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 320
+    },
+    {
+      "make": "SUBARU",
+      "sale_year": 2015.0,
+      "year_month": "2015-04",
+      "transactions": 17
+    },
+    {
+      "make": "SUBARU",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 288
+    },
+    {
+      "make": "SUBARU",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 940
+    },
+    {
+      "make": "SUBARU",
+      "sale_year": 2015.0,
+      "year_month": "2015-07",
+      "transactions": 6
+    },
+    {
+      "make": "SUZUKI",
+      "sale_year": 2014.0,
+      "year_month": "2014-01",
+      "transactions": 1
+    },
+    {
+      "make": "SUZUKI",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 145
+    },
+    {
+      "make": "SUZUKI",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 247
+    },
+    {
+      "make": "SUZUKI",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 351
+    },
+    {
+      "make": "SUZUKI",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 84
+    },
+    {
+      "make": "SUZUKI",
+      "sale_year": 2015.0,
+      "year_month": "2015-04",
+      "transactions": 4
+    },
+    {
+      "make": "SUZUKI",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 84
+    },
+    {
+      "make": "SUZUKI",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 160
+    },
+    {
+      "make": "SUZUKI",
+      "sale_year": 2015.0,
+      "year_month": "2015-07",
+      "transactions": 2
+    },
+    {
+      "make": "TESLA",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 1
+    },
+    {
+      "make": "TESLA",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 1
+    },
+    {
+      "make": "TESLA",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 7
+    },
+    {
+      "make": "TESLA",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 2
+    },
+    {
+      "make": "TESLA",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 4
+    },
+    {
+      "make": "TESLA",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 8
+    },
+    {
+      "make": "TOYOTA",
+      "sale_year": 2014.0,
+      "year_month": "2014-01",
+      "transactions": 6
+    },
+    {
+      "make": "TOYOTA",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 4087
+    },
+    {
+      "make": "TOYOTA",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 9779
+    },
+    {
+      "make": "TOYOTA",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 11084
+    },
+    {
+      "make": "TOYOTA",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 3387
+    },
+    {
+      "make": "TOYOTA",
+      "sale_year": 2015.0,
+      "year_month": "2015-04",
+      "transactions": 90
+    },
+    {
+      "make": "TOYOTA",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 3666
+    },
+    {
+      "make": "TOYOTA",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 7783
+    },
+    {
+      "make": "TOYOTA",
+      "sale_year": 2015.0,
+      "year_month": "2015-07",
+      "transactions": 84
+    },
+    {
+      "make": "VOLKSWAGEN",
+      "sale_year": 2014.0,
+      "year_month": "2014-01",
+      "transactions": 3
+    },
+    {
+      "make": "VOLKSWAGEN",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 1173
+    },
+    {
+      "make": "VOLKSWAGEN",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 3380
+    },
+    {
+      "make": "VOLKSWAGEN",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 3613
+    },
+    {
+      "make": "VOLKSWAGEN",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 847
+    },
+    {
+      "make": "VOLKSWAGEN",
+      "sale_year": 2015.0,
+      "year_month": "2015-04",
+      "transactions": 17
+    },
+    {
+      "make": "VOLKSWAGEN",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 1303
+    },
+    {
+      "make": "VOLKSWAGEN",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 2214
+    },
+    {
+      "make": "VOLKSWAGEN",
+      "sale_year": 2015.0,
+      "year_month": "2015-07",
+      "transactions": 29
+    },
+    {
+      "make": "VOLVO",
+      "sale_year": 2014.0,
+      "year_month": "2014-01",
+      "transactions": 2
+    },
+    {
+      "make": "VOLVO",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 402
+    },
+    {
+      "make": "VOLVO",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 897
+    },
+    {
+      "make": "VOLVO",
+      "sale_year": 2015.0,
+      "year_month": "2015-02",
+      "transactions": 1098
+    },
+    {
+      "make": "VOLVO",
+      "sale_year": 2015.0,
+      "year_month": "2015-03",
+      "transactions": 344
+    },
+    {
+      "make": "VOLVO",
+      "sale_year": 2015.0,
+      "year_month": "2015-04",
+      "transactions": 6
+    },
+    {
+      "make": "VOLVO",
+      "sale_year": 2015.0,
+      "year_month": "2015-05",
+      "transactions": 419
+    },
+    {
+      "make": "VOLVO",
+      "sale_year": 2015.0,
+      "year_month": "2015-06",
+      "transactions": 615
+    },
+    {
+      "make": "VOLVO",
+      "sale_year": 2015.0,
+      "year_month": "2015-07",
+      "transactions": 5
+    },
+    {
+      "make": "VW",
+      "sale_year": 2014.0,
+      "year_month": "2014-12",
+      "transactions": 4
+    },
+    {
+      "make": "VW",
+      "sale_year": 2015.0,
+      "year_month": "2015-01",
+      "transactions": 20
+    }
+  ],
   "avg_price_by_make": [
     {
       "make": "ROLLS-ROYCE",
@@ -1018,6 +3588,827 @@
     {
       "make": "BMW",
       "avg_sellingprice": 21474.03034675131
+    },
+    {
+      "make": "INFINITI",
+      "avg_sellingprice": 20417.457693564196
+    },
+    {
+      "make": "LEXUS",
+      "avg_sellingprice": 20213.986227045076
+    },
+    {
+      "make": "AUDI",
+      "avg_sellingprice": 19910.83460949464
+    },
+    {
+      "make": "JAGUAR",
+      "avg_sellingprice": 19782.518309859155
+    },
+    {
+      "make": "GMC",
+      "avg_sellingprice": 16923.40383530739
+    },
+    {
+      "make": "LINCOLN",
+      "avg_sellingprice": 16839.70186657449
+    },
+    {
+      "make": "HUMMER",
+      "avg_sellingprice": 15269.488198757765
+    },
+    {
+      "make": "SUBARU",
+      "avg_sellingprice": 15245.862433862434
+    },
+    {
+      "make": "CADILLAC",
+      "avg_sellingprice": 15072.469655262814
+    },
+    {
+      "make": "JEEP",
+      "avg_sellingprice": 14952.743525156624
+    },
+    {
+      "make": "FORD",
+      "avg_sellingprice": 14496.117728413976
+    },
+    {
+      "make": "ACURA",
+      "avg_sellingprice": 13983.597705028687
+    },
+    {
+      "make": "VW",
+      "avg_sellingprice": 13672.916666666666
+    },
+    {
+      "make": "MERCEDES-B",
+      "avg_sellingprice": 13650.0
+    },
+    {
+      "make": "MINI",
+      "avg_sellingprice": 12313.663151364764
+    },
+    {
+      "make": "TOYOTA",
+      "avg_sellingprice": 12237.650127608467
+    },
+    {
+      "make": "CHEVROLET",
+      "avg_sellingprice": 11939.35908693284
+    },
+    {
+      "make": "KIA",
+      "avg_sellingprice": 11806.175367769052
+    },
+    {
+      "make": "NISSAN",
+      "avg_sellingprice": 11731.562378510469
+    },
+    {
+      "make": "LANDROVER",
+      "avg_sellingprice": 11516.666666666666
+    },
+    {
+      "make": "VOLVO",
+      "avg_sellingprice": 11463.952481520591
+    },
+    {
+      "make": "DODGE",
+      "avg_sellingprice": 11164.073563144122
+    },
+    {
+      "make": "CHRYSLER",
+      "avg_sellingprice": 11068.147114339645
+    },
+    {
+      "make": "HYUNDAI",
+      "avg_sellingprice": 11003.269937245203
+    },
+    {
+      "make": "HONDA",
+      "avg_sellingprice": 10905.410551716574
+    },
+    {
+      "make": "BUICK",
+      "avg_sellingprice": 10709.563561804334
+    },
+    {
+      "make": "FIAT",
+      "avg_sellingprice": 10367.487861271677
+    },
+    {
+      "make": "MAZDA",
+      "avg_sellingprice": 10050.081335213916
+    },
+    {
+      "make": "SCION",
+      "avg_sellingprice": 9578.808535862478
+    },
+    {
+      "make": "VOLKSWAGEN",
+      "avg_sellingprice": 9377.539389131298
+    },
+    {
+      "make": "MITSUBISHI",
+      "avg_sellingprice": 8185.243833685694
+    },
+    {
+      "make": "MERCEDES",
+      "avg_sellingprice": 7471.428571428572
+    },
+    {
+      "make": "PLYMOUTH",
+      "avg_sellingprice": 7287.962962962963
+    },
+    {
+      "make": "GMC TRUCK",
+      "avg_sellingprice": 6920.454545454545
+    },
+    {
+      "make": "MAZDA TK",
+      "avg_sellingprice": 6500.0
+    },
+    {
+      "make": "SMART",
+      "avg_sellingprice": 6236.868686868687
+    },
+    {
+      "make": "SUZUKI",
+      "avg_sellingprice": 3907.3469387755104
+    },
+    {
+      "make": "MERCURY",
+      "avg_sellingprice": 3907.266435986159
+    },
+    {
+      "make": "PONTIAC",
+      "avg_sellingprice": 3752.2272325375775
+    },
+    {
+      "make": "SAAB",
+      "avg_sellingprice": 3628.099173553719
+    },
+    {
+      "make": "SATURN",
+      "avg_sellingprice": 3385.427666314678
+    },
+    {
+      "make": "FORD TK",
+      "avg_sellingprice": 2800.0
+    },
+    {
+      "make": "HYUNDAI TK",
+      "avg_sellingprice": 2100.0
+    },
+    {
+      "make": "CHEV TRUCK",
+      "avg_sellingprice": 2000.0
+    },
+    {
+      "make": "ISUZU",
+      "avg_sellingprice": 1709.1960784313726
+    },
+    {
+      "make": "OLDSMOBILE",
+      "avg_sellingprice": 939.453125
+    },
+    {
+      "make": "DODGE TK",
+      "avg_sellingprice": 550.0
+    },
+    {
+      "make": "GEO",
+      "avg_sellingprice": 528.9473684210526
+    },
+    {
+      "make": "DOT",
+      "avg_sellingprice": 500.0
+    },
+    {
+      "make": "FORD TRUCK",
+      "avg_sellingprice": 483.3333333333333
+    },
+    {
+      "make": "DAEWOO",
+      "avg_sellingprice": 400.0
+    }
+  ],
+  "avg_price_by_make_year": [
+    {
+      "make": "ACURA",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 12998.898071625345
+    },
+    {
+      "make": "ACURA",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 14121.076923076924
+    },
+    {
+      "make": "AIRSTREAM",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 71000.0
+    },
+    {
+      "make": "ASTON MARTIN",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 54812.0
+    },
+    {
+      "make": "AUDI",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 16520.740103270226
+    },
+    {
+      "make": "AUDI",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 20282.746412386707
+    },
+    {
+      "make": "BENTLEY",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 66636.11111111111
+    },
+    {
+      "make": "BENTLEY",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 75787.75510204081
+    },
+    {
+      "make": "BMW",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 19346.940789473683
+    },
+    {
+      "make": "BMW",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 21716.540208947226
+    },
+    {
+      "make": "BUICK",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 7736.363636363636
+    },
+    {
+      "make": "BUICK",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 11067.310216582804
+    },
+    {
+      "make": "CADILLAC",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 11700.550998948474
+    },
+    {
+      "make": "CADILLAC",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 15552.657532195268
+    },
+    {
+      "make": "CHEV TRUCK",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 2000.0
+    },
+    {
+      "make": "CHEVROLET",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 9541.730105465005
+    },
+    {
+      "make": "CHEVROLET",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 12215.53501813028
+    },
+    {
+      "make": "CHRYSLER",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 7352.818772136954
+    },
+    {
+      "make": "CHRYSLER",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 11466.764266261322
+    },
+    {
+      "make": "DAEWOO",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 300.0
+    },
+    {
+      "make": "DAEWOO",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 450.0
+    },
+    {
+      "make": "DODGE",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 8609.474908607512
+    },
+    {
+      "make": "DODGE",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 11439.151839393071
+    },
+    {
+      "make": "DODGE TK",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 550.0
+    },
+    {
+      "make": "DOT",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 500.0
+    },
+    {
+      "make": "FERRARI",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 144666.66666666666
+    },
+    {
+      "make": "FERRARI",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 123937.5
+    },
+    {
+      "make": "FIAT",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 9021.27659574468
+    },
+    {
+      "make": "FIAT",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 10444.837408312958
+    },
+    {
+      "make": "FISKER",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 46461.11111111111
+    },
+    {
+      "make": "FORD",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 11274.898646034817
+    },
+    {
+      "make": "FORD",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 14785.777565195209
+    },
+    {
+      "make": "FORD TK",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 2800.0
+    },
+    {
+      "make": "FORD TRUCK",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 350.0
+    },
+    {
+      "make": "FORD TRUCK",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 550.0
+    },
+    {
+      "make": "GEO",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 300.0
+    },
+    {
+      "make": "GEO",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 541.6666666666666
+    },
+    {
+      "make": "GMC",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 13213.20939334638
+    },
+    {
+      "make": "GMC",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 17317.727745424294
+    },
+    {
+      "make": "GMC TRUCK",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 4050.0
+    },
+    {
+      "make": "GMC TRUCK",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 10365.0
+    },
+    {
+      "make": "HONDA",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 9723.286407766991
+    },
+    {
+      "make": "HONDA",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 11078.99429745482
+    },
+    {
+      "make": "HUMMER",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 13743.57142857143
+    },
+    {
+      "make": "HUMMER",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 15414.813605442178
+    },
+    {
+      "make": "HYUNDAI",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 10348.97170263789
+    },
+    {
+      "make": "HYUNDAI",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 11072.357945913096
+    },
+    {
+      "make": "HYUNDAI TK",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 2100.0
+    },
+    {
+      "make": "INFINITI",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 19372.95241749808
+    },
+    {
+      "make": "INFINITI",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 20514.657406084843
+    },
+    {
+      "make": "ISUZU",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 1335.7142857142858
+    },
+    {
+      "make": "ISUZU",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 1768.6136363636363
+    },
+    {
+      "make": "JAGUAR",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 16861.377245508982
+    },
+    {
+      "make": "JAGUAR",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 20171.848363926576
+    },
+    {
+      "make": "JEEP",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 11776.22730284957
+    },
+    {
+      "make": "JEEP",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 15295.763632460283
+    },
+    {
+      "make": "KIA",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 10304.960054163847
+    },
+    {
+      "make": "KIA",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 11939.707136404697
+    },
+    {
+      "make": "LAMBORGHINI",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 112625.0
+    },
+    {
+      "make": "LAND ROVER",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 24909.140969162996
+    },
+    {
+      "make": "LAND ROVER",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 32548.094074526573
+    },
+    {
+      "make": "LANDROVER",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 10715.0
+    },
+    {
+      "make": "LANDROVER",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 13807.142857142857
+    },
+    {
+      "make": "LEXUS",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 17458.045977011494
+    },
+    {
+      "make": "LEXUS",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 20501.290902387318
+    },
+    {
+      "make": "LINCOLN",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 11365.578947368422
+    },
+    {
+      "make": "LINCOLN",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 17329.29109395594
+    },
+    {
+      "make": "LOTUS",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 40800.0
+    },
+    {
+      "make": "MASERATI",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 34236.36363636364
+    },
+    {
+      "make": "MASERATI",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 45889.6
+    },
+    {
+      "make": "MAZDA",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 9500.462332301342
+    },
+    {
+      "make": "MAZDA",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 10120.724764557634
+    },
+    {
+      "make": "MAZDA TK",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 6500.0
+    },
+    {
+      "make": "MERCEDES",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 7501.136363636364
+    },
+    {
+      "make": "MERCEDES",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 7421.153846153846
+    },
+    {
+      "make": "MERCEDES-B",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 18500.0
+    },
+    {
+      "make": "MERCEDES-B",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 8800.0
+    },
+    {
+      "make": "MERCEDES-BENZ",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 19660.91783119061
+    },
+    {
+      "make": "MERCEDES-BENZ",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 21815.432777488277
+    },
+    {
+      "make": "MERCURY",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 3628.228782287823
+    },
+    {
+      "make": "MERCURY",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 3950.428082191781
+    },
+    {
+      "make": "MINI",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 11336.026936026936
+    },
+    {
+      "make": "MINI",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 12412.862999658353
+    },
+    {
+      "make": "MITSUBISHI",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 7218.320964749536
+    },
+    {
+      "make": "MITSUBISHI",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 8325.419042495965
+    },
+    {
+      "make": "NISSAN",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 10395.717867006586
+    },
+    {
+      "make": "NISSAN",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 11859.078503346178
+    },
+    {
+      "make": "OLDSMOBILE",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 994.4444444444445
+    },
+    {
+      "make": "OLDSMOBILE",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 926.7628205128206
+    },
+    {
+      "make": "PLYMOUTH",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 670.0
+    },
+    {
+      "make": "PLYMOUTH",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 11180.882352941177
+    },
+    {
+      "make": "PONTIAC",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 3185.475482912333
+    },
+    {
+      "make": "PONTIAC",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 3851.2726564528693
+    },
+    {
+      "make": "PORSCHE",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 30507.98611111111
+    },
+    {
+      "make": "PORSCHE",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 40911.487281399044
+    },
+    {
+      "make": "RAM",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 22946.518987341773
+    },
+    {
+      "make": "RAM",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 25474.591592296852
+    },
+    {
+      "make": "ROLLS-ROYCE",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 149800.0
+    },
+    {
+      "make": "ROLLS-ROYCE",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 153718.75
+    },
+    {
+      "make": "SAAB",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 3316.6666666666665
+    },
+    {
+      "make": "SAAB",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 3682.5242718446602
+    },
+    {
+      "make": "SATURN",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 3118.483146067416
+    },
+    {
+      "make": "SATURN",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 3435.006260434057
+    },
+    {
+      "make": "SCION",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 9600.0
+    },
+    {
+      "make": "SCION",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 9575.893459204315
+    },
+    {
+      "make": "SMART",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 6316.666666666667
+    },
+    {
+      "make": "SMART",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 6228.151260504202
+    },
+    {
+      "make": "SUBARU",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 11168.651315789473
+    },
+    {
+      "make": "SUBARU",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 15645.950290510007
+    },
+    {
+      "make": "SUZUKI",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 3641.095890410959
+    },
+    {
+      "make": "SUZUKI",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 3949.0557939914165
+    },
+    {
+      "make": "TESLA",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 80000.0
+    },
+    {
+      "make": "TESLA",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 66465.90909090909
+    },
+    {
+      "make": "TOYOTA",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 10872.538724651844
+    },
+    {
+      "make": "TOYOTA",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 12393.405179382822
+    },
+    {
+      "make": "VOLKSWAGEN",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 6919.110544217687
+    },
+    {
+      "make": "VOLKSWAGEN",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 9621.30228887135
+    },
+    {
+      "make": "VOLVO",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 8502.784653465347
+    },
+    {
+      "make": "VOLVO",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 11817.472517730497
+    },
+    {
+      "make": "VW",
+      "sale_year": 2014.0,
+      "avg_sellingprice": 1512.5
+    },
+    {
+      "make": "VW",
+      "sale_year": 2015.0,
+      "avg_sellingprice": 16105.0
+    }
+  ],
+  "avg_price_by_year": [
+    {
+      "sale_year": 2014.0,
+      "avg_sellingprice": 11309.954937180084
+    },
+    {
+      "sale_year": 2015.0,
+      "avg_sellingprice": 13856.157628387127
     }
   ],
   "price_vs_mmr_by_make": [
@@ -1080,6 +4471,827 @@
     {
       "make": "FORD TRUCK",
       "avg_price_vs_mmr": -66.66666666666667
+    },
+    {
+      "make": "DODGE TK",
+      "avg_price_vs_mmr": -75.0
+    },
+    {
+      "make": "GEO",
+      "avg_price_vs_mmr": -80.26315789473684
+    },
+    {
+      "make": "LEXUS",
+      "avg_price_vs_mmr": -83.9415692821369
+    },
+    {
+      "make": "SUBARU",
+      "avg_price_vs_mmr": -87.52968841857731
+    },
+    {
+      "make": "INFINITI",
+      "avg_price_vs_mmr": -87.64194707611891
+    },
+    {
+      "make": "SCION",
+      "avg_price_vs_mmr": -93.93894487255483
+    },
+    {
+      "make": "MINI",
+      "avg_price_vs_mmr": -98.65074441687345
+    },
+    {
+      "make": "GMC",
+      "avg_price_vs_mmr": -105.05311148712164
+    },
+    {
+      "make": "VOLVO",
+      "avg_price_vs_mmr": -109.36457233368532
+    },
+    {
+      "make": "TOYOTA",
+      "avg_price_vs_mmr": -109.48681379172297
+    },
+    {
+      "make": "MERCEDES",
+      "avg_price_vs_mmr": -110.0
+    },
+    {
+      "make": "SMART",
+      "avg_price_vs_mmr": -117.73989898989899
+    },
+    {
+      "make": "MITSUBISHI",
+      "avg_price_vs_mmr": -118.4442095372328
+    },
+    {
+      "make": "CADILLAC",
+      "avg_price_vs_mmr": -119.24616594573338
+    },
+    {
+      "make": "JEEP",
+      "avg_price_vs_mmr": -119.27901569463282
+    },
+    {
+      "make": "MAZDA",
+      "avg_price_vs_mmr": -123.90491302303714
+    },
+    {
+      "make": "SATURN",
+      "avg_price_vs_mmr": -125.36078845476945
+    },
+    {
+      "make": "NISSAN",
+      "avg_price_vs_mmr": -127.98600440602033
+    },
+    {
+      "make": "BMW",
+      "avg_price_vs_mmr": -134.16712355119512
+    },
+    {
+      "make": "KIA",
+      "avg_price_vs_mmr": -138.6136489326402
+    },
+    {
+      "make": "SAAB",
+      "avg_price_vs_mmr": -140.54752066115702
+    },
+    {
+      "make": "OLDSMOBILE",
+      "avg_price_vs_mmr": -147.65625
+    },
+    {
+      "make": "VOLKSWAGEN",
+      "avg_price_vs_mmr": -150.1364178392559
+    },
+    {
+      "make": "AUDI",
+      "avg_price_vs_mmr": -164.6120469627361
+    },
+    {
+      "make": "MERCURY",
+      "avg_price_vs_mmr": -165.3114186851211
+    },
+    {
+      "make": "FIAT",
+      "avg_price_vs_mmr": -168.35028901734103
+    },
+    {
+      "make": "CHEVROLET",
+      "avg_price_vs_mmr": -171.54424216416064
+    },
+    {
+      "make": "VW",
+      "avg_price_vs_mmr": -175.0
+    },
+    {
+      "make": "BUICK",
+      "avg_price_vs_mmr": -186.92638156610036
+    },
+    {
+      "make": "FORD",
+      "avg_price_vs_mmr": -192.46210477041575
+    },
+    {
+      "make": "PONTIAC",
+      "avg_price_vs_mmr": -195.87179487179486
+    },
+    {
+      "make": "DODGE",
+      "avg_price_vs_mmr": -209.01305204665138
+    },
+    {
+      "make": "LINCOLN",
+      "avg_price_vs_mmr": -216.45091600414796
+    },
+    {
+      "make": "HYUNDAI",
+      "avg_price_vs_mmr": -221.35559525445467
+    },
+    {
+      "make": "RAM",
+      "avg_price_vs_mmr": -228.38084827284652
+    },
+    {
+      "make": "DAEWOO",
+      "avg_price_vs_mmr": -233.33333333333334
+    },
+    {
+      "make": "CHRYSLER",
+      "avg_price_vs_mmr": -247.85986386775724
+    },
+    {
+      "make": "PORSCHE",
+      "avg_price_vs_mmr": -265.4593437945792
+    },
+    {
+      "make": "LAND ROVER",
+      "avg_price_vs_mmr": -302.6260729613734
+    },
+    {
+      "make": "MERCEDES-BENZ",
+      "avg_price_vs_mmr": -349.65107053264103
+    },
+    {
+      "make": "DOT",
+      "avg_price_vs_mmr": -350.0
+    },
+    {
+      "make": "JAGUAR",
+      "avg_price_vs_mmr": -353.2387323943662
+    },
+    {
+      "make": "MERCEDES-B",
+      "avg_price_vs_mmr": -450.0
+    },
+    {
+      "make": "FORD TK",
+      "avg_price_vs_mmr": -675.0
+    },
+    {
+      "make": "MASERATI",
+      "avg_price_vs_mmr": -733.0882352941177
+    },
+    {
+      "make": "TESLA",
+      "avg_price_vs_mmr": -758.695652173913
+    },
+    {
+      "make": "ROLLS-ROYCE",
+      "avg_price_vs_mmr": -805.8823529411765
+    },
+    {
+      "make": "PLYMOUTH",
+      "avg_price_vs_mmr": -1150.0
+    },
+    {
+      "make": "BENTLEY",
+      "avg_price_vs_mmr": -1560.7758620689656
+    },
+    {
+      "make": "FERRARI",
+      "avg_price_vs_mmr": -2000.0
+    },
+    {
+      "make": "FISKER",
+      "avg_price_vs_mmr": -2638.8888888888887
+    }
+  ],
+  "price_vs_mmr_by_make_year": [
+    {
+      "make": "ACURA",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -92.32093663911846
+    },
+    {
+      "make": "ACURA",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -55.07692307692308
+    },
+    {
+      "make": "AIRSTREAM",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": 41500.0
+    },
+    {
+      "make": "ASTON MARTIN",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": 1252.0
+    },
+    {
+      "make": "AUDI",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -222.289156626506
+    },
+    {
+      "make": "AUDI",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -158.28455438066464
+    },
+    {
+      "make": "BENTLEY",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": 552.7777777777778
+    },
+    {
+      "make": "BENTLEY",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -1948.9795918367347
+    },
+    {
+      "make": "BMW",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -301.7551691729323
+    },
+    {
+      "make": "BMW",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -115.06038039110635
+    },
+    {
+      "make": "BUICK",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -286.09090909090907
+    },
+    {
+      "make": "BUICK",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -174.9945307372566
+    },
+    {
+      "make": "CADILLAC",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -273.5552050473186
+    },
+    {
+      "make": "CADILLAC",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -97.27133872416891
+    },
+    {
+      "make": "CHEV TRUCK",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": 75.0
+    },
+    {
+      "make": "CHEVROLET",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -345.24256951102586
+    },
+    {
+      "make": "CHEVROLET",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -151.53643542122992
+    },
+    {
+      "make": "CHRYSLER",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -342.0306965761511
+    },
+    {
+      "make": "CHRYSLER",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -237.75628602191398
+    },
+    {
+      "make": "DAEWOO",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -625.0
+    },
+    {
+      "make": "DAEWOO",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -37.5
+    },
+    {
+      "make": "DODGE",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -341.0900631439016
+    },
+    {
+      "make": "DODGE",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -194.79104637847124
+    },
+    {
+      "make": "DODGE TK",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -75.0
+    },
+    {
+      "make": "DOT",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -350.0
+    },
+    {
+      "make": "FERRARI",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -1333.3333333333333
+    },
+    {
+      "make": "FERRARI",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -2125.0
+    },
+    {
+      "make": "FIAT",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -505.8510638297872
+    },
+    {
+      "make": "FIAT",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -148.95843520782395
+    },
+    {
+      "make": "FISKER",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -2638.8888888888887
+    },
+    {
+      "make": "FORD",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -357.13230174081235
+    },
+    {
+      "make": "FORD",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -177.65456105564638
+    },
+    {
+      "make": "FORD TK",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -675.0
+    },
+    {
+      "make": "FORD TRUCK",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -250.0
+    },
+    {
+      "make": "FORD TRUCK",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": 25.0
+    },
+    {
+      "make": "GEO",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -450.0
+    },
+    {
+      "make": "GEO",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -59.72222222222222
+    },
+    {
+      "make": "GMC",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -358.90410958904107
+    },
+    {
+      "make": "GMC",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -78.07352329450916
+    },
+    {
+      "make": "GMC TRUCK",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -354.1666666666667
+    },
+    {
+      "make": "GMC TRUCK",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": 1370.0
+    },
+    {
+      "make": "HONDA",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -71.66647629925757
+    },
+    {
+      "make": "HONDA",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -60.10797098410835
+    },
+    {
+      "make": "HUMMER",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": 132.5
+    },
+    {
+      "make": "HUMMER",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": 264.065306122449
+    },
+    {
+      "make": "HYUNDAI",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -365.7645083932854
+    },
+    {
+      "make": "HYUNDAI",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -206.10731287349336
+    },
+    {
+      "make": "HYUNDAI TK",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": 225.0
+    },
+    {
+      "make": "INFINITI",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -210.87336914811974
+    },
+    {
+      "make": "INFINITI",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -76.17426081988287
+    },
+    {
+      "make": "ISUZU",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -33.035714285714285
+    },
+    {
+      "make": "ISUZU",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -43.03409090909091
+    },
+    {
+      "make": "JAGUAR",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -342.0658682634731
+    },
+    {
+      "make": "JAGUAR",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -354.72785315243414
+    },
+    {
+      "make": "JEEP",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -174.26971504307488
+    },
+    {
+      "make": "JEEP",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -113.34077572634894
+    },
+    {
+      "make": "KIA",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -199.50846310088016
+    },
+    {
+      "make": "KIA",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -133.1971093044264
+    },
+    {
+      "make": "LAMBORGHINI",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": 1125.0
+    },
+    {
+      "make": "LAND ROVER",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -705.3964757709251
+    },
+    {
+      "make": "LAND ROVER",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -246.7745876603543
+    },
+    {
+      "make": "LANDROVER",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -211.25
+    },
+    {
+      "make": "LANDROVER",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": 1364.2857142857142
+    },
+    {
+      "make": "LEXUS",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -241.88770999115826
+    },
+    {
+      "make": "LEXUS",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -67.47580422158724
+    },
+    {
+      "make": "LINCOLN",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -281.2105263157895
+    },
+    {
+      "make": "LINCOLN",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -210.65900960271136
+    },
+    {
+      "make": "LOTUS",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": 500.0
+    },
+    {
+      "make": "MASERATI",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -1618.1818181818182
+    },
+    {
+      "make": "MASERATI",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -655.2
+    },
+    {
+      "make": "MAZDA",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -311.71517027863774
+    },
+    {
+      "make": "MAZDA",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -99.76535349515851
+    },
+    {
+      "make": "MAZDA TK",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": 1125.0
+    },
+    {
+      "make": "MERCEDES",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -207.95454545454547
+    },
+    {
+      "make": "MERCEDES",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": 55.76923076923077
+    },
+    {
+      "make": "MERCEDES-B",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -400.0
+    },
+    {
+      "make": "MERCEDES-B",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -500.0
+    },
+    {
+      "make": "MERCEDES-BENZ",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -624.8144214645054
+    },
+    {
+      "make": "MERCEDES-BENZ",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -317.58572173006775
+    },
+    {
+      "make": "MERCURY",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -120.01845018450184
+    },
+    {
+      "make": "MERCURY",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -172.3173515981735
+    },
+    {
+      "make": "MINI",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -159.17508417508418
+    },
+    {
+      "make": "MINI",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -92.50939528527502
+    },
+    {
+      "make": "MITSUBISHI",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -77.59740259740259
+    },
+    {
+      "make": "MITSUBISHI",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -124.36578805809575
+    },
+    {
+      "make": "NISSAN",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -258.9878903760357
+    },
+    {
+      "make": "NISSAN",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -115.48091664976678
+    },
+    {
+      "make": "OLDSMOBILE",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -94.79166666666667
+    },
+    {
+      "make": "OLDSMOBILE",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -159.85576923076923
+    },
+    {
+      "make": "PLYMOUTH",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": 47.5
+    },
+    {
+      "make": "PLYMOUTH",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -1854.4117647058824
+    },
+    {
+      "make": "PONTIAC",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -223.66270430906388
+    },
+    {
+      "make": "PONTIAC",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -191.0150610231109
+    },
+    {
+      "make": "PORSCHE",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -291.49305555555554
+    },
+    {
+      "make": "PORSCHE",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -262.4793322734499
+    },
+    {
+      "make": "RAM",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -471.3607594936709
+    },
+    {
+      "make": "RAM",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -210.34852043212777
+    },
+    {
+      "make": "ROLLS-ROYCE",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -7200.0
+    },
+    {
+      "make": "ROLLS-ROYCE",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -406.25
+    },
+    {
+      "make": "SAAB",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -256.25
+    },
+    {
+      "make": "SAAB",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -120.32766990291262
+    },
+    {
+      "make": "SATURN",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -121.12359550561797
+    },
+    {
+      "make": "SATURN",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -126.14774624373956
+    },
+    {
+      "make": "SCION",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -268.62745098039215
+    },
+    {
+      "make": "SCION",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -69.90896830748483
+    },
+    {
+      "make": "SMART",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -69.87179487179488
+    },
+    {
+      "make": "SMART",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -122.96918767507003
+    },
+    {
+      "make": "SUBARU",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -329.64912280701753
+    },
+    {
+      "make": "SUBARU",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -63.771035076393375
+    },
+    {
+      "make": "SUZUKI",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -87.32876712328768
+    },
+    {
+      "make": "SUZUKI",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": 31.244635193133046
+    },
+    {
+      "make": "TESLA",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -7000.0
+    },
+    {
+      "make": "TESLA",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -475.0
+    },
+    {
+      "make": "TOYOTA",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -214.11531883703884
+    },
+    {
+      "make": "TOYOTA",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -97.54902015443369
+    },
+    {
+      "make": "VOLKSWAGEN",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -239.5204081632653
+    },
+    {
+      "make": "VOLKSWAGEN",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -140.9181794264667
+    },
+    {
+      "make": "VOLVO",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -212.31435643564356
+    },
+    {
+      "make": "VOLVO",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -97.07387706855792
+    },
+    {
+      "make": "VW",
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": 168.75
+    },
+    {
+      "make": "VW",
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -243.75
+    }
+  ],
+  "price_vs_mmr_by_year": [
+    {
+      "sale_year": 2014.0,
+      "avg_price_vs_mmr": -285.6499953466729
+    },
+    {
+      "sale_year": 2015.0,
+      "avg_price_vs_mmr": -144.44525356680407
     }
   ],
   "code_showcase": {
@@ -1089,11 +5301,11 @@
     },
     "category_summary": {
       "description": "Count transactions per manufacturer to identify which makes dominate auction volume. This is a standard OLAP roll-up from individual rows to category totals.",
-      "code": "# Group by make -> count rows -> sort descending\ntx_by_make = (\n    df.groupby('make')\n    .size()\n    .reset_index(name='transactions')\n    .sort_values('transactions', ascending=False)\n)\n# Top result: FORD \u2014 12,406 transactions"
+      "code": "# Group by make -> count rows -> sort descending\ntx_by_make = (\n    df.groupby('make')\n    .size()\n    .reset_index(name='transactions')\n    .sort_values('transactions', ascending=False)\n)\n# Top result: FORD \u2014 93,997 transactions"
     },
     "time_summary": {
       "description": "Aggregate transaction counts by year-month to reveal seasonal patterns and volume trends over time.",
-      "code": "# Group by year + month for time-series granularity\ntx_by_month = (\n    df.groupby(['sale_year', 'sale_month'])\n    .size()\n    .reset_index(name='transactions')\n)\n# Produces rows like: 2015-01 | 8,045 transactions"
+      "code": "# Group by year + month for time-series granularity\ntx_by_month = (\n    df.groupby(['sale_year', 'sale_month'])\n    .size()\n    .reset_index(name='transactions')\n)\n# Peak row: 2015-02 | 163,052 transactions"
     },
     "additional_summary": {
       "description": "Calculate how much each make sells above or below its Manheim Market Report (MMR) value on average. Positive = sellers get more than market estimate.",
