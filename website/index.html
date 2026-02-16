@@ -3,99 +3,155 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Car Prices Mini Data Analysis</title>
+    <title>WheelWise Mini Data Analysis Report</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
     <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" defer></script>
     <script src="app.js" defer></script>
   </head>
   <body>
-    <header class="hero">
-      <div class="hero__overlay"></div>
-      <div class="hero__content">
-        <p class="eyebrow">Mini Data Analysis & Reporting Activity</p>
-        <h1>Car Prices: OLTP to OLAP Insights</h1>
-        <p class="subtitle">
-          This demo presents our full workflow: data understanding, transformation, aggregation, findings, and recommendations.
-        </p>
-        <p class="hero__authors">Presented by Justin Louis Amper Dampal &amp; Greg Danielle Cabanda Duetes</p>
-      </div>
-    </header>
+    <main class="dashboard-shell">
+      <section class="panel map-board" id="olap-live">
+        <header class="chapter-header chapter-header--tight">
+          <h2>Car Prices Mini Data Analysis &amp; Reporting Activity</h2>
+        </header>
 
-    <nav class="sticky-nav" id="sticky-nav">
-      <div class="sticky-nav__inner">
-        <a href="#dataset-overview" class="nav-link active" data-section="dataset-overview"><span class="nav-num">01</span> Overview</a>
-        <a href="#data-dictionary" class="nav-link" data-section="data-dictionary"><span class="nav-num">02</span> Data Dictionary</a>
-        <a href="#oltp-perspective" class="nav-link" data-section="oltp-perspective"><span class="nav-num">03</span> OLTP</a>
-        <a href="#methodology" class="nav-link" data-section="methodology"><span class="nav-num">04</span> Methodology</a>
-        <a href="#dashboard" class="nav-link" data-section="dashboard"><span class="nav-num">05</span> Dashboard</a>
-        <a href="#findings" class="nav-link" data-section="findings"><span class="nav-num">06</span> Findings</a>
-      </div>
-    </nav>
+        <div class="board-main">
+          <aside class="live-sidebar">
+            <section class="metric-cluster">
+              <h3 class="metric-label">Total transactions</h3>
+              <p id="metric-total" class="metric-total">0</p>
+              <p id="metric-rate" class="metric-rate">0/s</p>
+            </section>
 
-    <main class="layout">
-      <section class="panel" id="dataset-overview">
-        <h2><span class="section-num">01</span> Dataset Overview</h2>
-        <div id="dataset-kpis" class="kpi-grid"></div>
-        <p class="note">
-          One row represents one completed car sale transaction (vehicle details, seller context, valuation, and final selling price).
-        </p>
+            <section class="metric-cluster">
+              <h3 class="metric-label">Top states by transactions</h3>
+              <ul id="top-states-list" class="top-list"></ul>
+            </section>
+
+            <p class="region-count">
+              <span class="triangle">▲</span>
+              <span id="region-count">0</span>
+              <span>Sales regions</span>
+            </p>
+          </aside>
+
+          <div class="map-stage">
+            <svg id="map-svg" viewBox="0 0 1100 600" role="img" aria-label="Dotted world activity map">
+              <g id="map-static-layer"></g>
+              <g id="map-active-layer"></g>
+              <g id="map-marker-layer"></g>
+            </svg>
+            <div id="marker-tooltip" class="marker-tooltip" hidden></div>
+          </div>
+        </div>
+
+        <section class="cards-grid" aria-label="Summary cards">
+          <div class="card-col">
+            <article class="stat-card">
+              <h3>Total transactions</h3>
+              <p class="headline" id="card-total-transactions">0</p>
+            </article>
+            <article class="stat-card">
+              <h3>Valid rows</h3>
+              <ul class="metric-lines">
+                <li><span>Price rows</span><span id="card-valid-price">0</span></li>
+                <li><span>Date rows</span><span id="card-valid-date">0</span></li>
+              </ul>
+            </article>
+          </div>
+
+          <article class="stat-card stat-card--center">
+            <h3>Pricing health</h3>
+            <p class="headline" id="card-avg-price">$0</p>
+            <ul class="metric-lines">
+              <li><span>Avg price vs MMR</span><span id="card-vs-mmr">$0</span></li>
+              <li><span>Average car age</span><span id="card-car-age">0 years</span></li>
+              <li><span>Peak month</span><span id="card-peak-month">-</span></li>
+            </ul>
+          </article>
+
+          <div class="card-col">
+            <article class="stat-card">
+              <h3>Market leaders</h3>
+              <ul class="metric-lines">
+                <li><span id="card-top-make-label">Top make</span><span id="card-top-make-tx">0</span></li>
+                <li><span id="card-top-body-label">Top body</span><span id="card-top-body-tx">0</span></li>
+              </ul>
+            </article>
+            <article class="stat-card">
+              <h3>Regional focus</h3>
+              <p class="headline" id="card-top-state">-</p>
+              <p class="subtext" id="card-top-state-tx">0 transactions</p>
+            </article>
+          </div>
+        </section>
       </section>
 
-      <section class="panel" id="data-dictionary">
-        <h2><span class="section-num">02</span> Data Dictionary</h2>
-        <p class="note">All 16 original columns in <code>car_prices.csv</code>, with types, examples, and notes.</p>
+      <section class="panel chapter" id="introduction">
+        <header class="chapter-header">
+          <h2>Introduction</h2>
+        </header>
+        <div class="intro-copy">
+          <p>
+            The dataset contains used-car sales transactions with fields for vehicle details, seller, condition, odometer
+            reading, market reference value (MMR), final selling price, and sale date.
+          </p>
+          <p>
+            The data likely originates from an operational automotive sales platform where each transaction captures a specific sale event.
+          </p>
+          <p>
+            This report converts raw operational records into analytical summaries by category, time, and pricing behavior.
+          </p>
+        </div>
+        <div id="dataset-kpis" class="kpi-grid"></div>
+      </section>
+
+      <section class="panel chapter" id="data-dictionary">
+        <header class="chapter-header">
+          <h2>Data Dictionary</h2>
+        </header>
+        <p class="chapter-note">All 16 original columns in <code>car_prices.csv</code>, with types, examples, and notes.</p>
         <div id="dictionary-grid" class="dictionary-grid"></div>
       </section>
 
-      <section class="panel" id="oltp-perspective">
-        <h2><span class="section-num">03</span> OLTP Perspective</h2>
+      <section class="panel chapter" id="oltp-perspective">
+        <header class="chapter-header">
+          <h2>OLTP Perspective</h2>
+        </header>
         <div class="text-grid">
-          <article>
+          <article class="text-card">
             <h3>Why this is transactional data</h3>
             <p>
-              Each record captures a single operational event and is optimized for daily execution (recording sales), not summary reporting.
+              One row represents one completed car sale transaction. It stores what car was sold, by whom, when, and for how much.
             </p>
           </article>
-          <article>
+          <article class="text-card">
+            <h3>Operational characteristics</h3>
+            <p>
+              The data is event-level and high-volume, designed for day-to-day operational recording rather than summarized reporting.
+            </p>
+          </article>
+          <article class="text-card">
             <h3>Likely source system</h3>
             <p>
-              A dealership or auction transaction platform connected to inventory, seller records, and pricing references (MMR).
+              A vehicle sales transaction management system integrated with dealer inventory and auction workflows.
             </p>
           </article>
         </div>
       </section>
 
-      <section class="panel" id="methodology">
-        <h2><span class="section-num">04</span> Methodology / Code Showcase</h2>
-        <div class="code-grid">
-          <article>
-            <h3>Cleaning and Feature Engineering</h3>
-            <p class="code-desc" id="desc-cleaning"></p>
-            <pre><code id="code-cleaning"></code></pre>
-          </article>
-          <article>
-            <h3>Category Aggregation</h3>
-            <p class="code-desc" id="desc-category"></p>
-            <pre><code id="code-category"></code></pre>
-          </article>
-          <article>
-            <h3>Time Aggregation</h3>
-            <p class="code-desc" id="desc-time"></p>
-            <pre><code id="code-time"></code></pre>
-          </article>
-          <article>
-            <h3>Additional Insight Metric</h3>
-            <p class="code-desc" id="desc-additional"></p>
-            <pre><code id="code-additional"></code></pre>
-          </article>
-        </div>
-      </section>
+      <section class="panel chapter analysis" id="analysis">
+        <header class="chapter-header">
+          <h2>Data Analysis (OLAP Results)</h2>
+          <p class="chapter-note">Filter by make and year to inspect volume and pricing behavior.</p>
+        </header>
 
-      <section class="panel" id="dashboard">
-        <h2><span class="section-num">05</span> OLAP Dashboard</h2>
         <div class="filters">
           <label for="make-filter">Make</label>
           <select id="make-filter"></select>
@@ -106,34 +162,74 @@
         <div class="kpi-grid" id="dashboard-kpis"></div>
 
         <div class="chart-grid">
-          <article>
-            <h3>Transactions by Make</h3>
+          <article class="chart-card">
+            <h3>Transactions by make</h3>
             <div id="chart-make" class="chart"></div>
           </article>
-          <article>
-            <h3>Transactions by Month</h3>
+          <article class="chart-card">
+            <h3>Transactions by month</h3>
             <div id="chart-month" class="chart"></div>
           </article>
-          <article>
-            <h3>Average Selling Price by Make</h3>
+          <article class="chart-card">
+            <h3>Average selling price by make</h3>
             <div id="chart-price" class="chart"></div>
           </article>
-          <article>
-            <h3>Average Price vs MMR by Make</h3>
+          <article class="chart-card">
+            <h3>Average price vs MMR by make</h3>
             <div id="chart-vs-mmr" class="chart"></div>
             <p class="note" id="vs-mmr-outliers"></p>
           </article>
         </div>
       </section>
 
-      <section class="panel" id="findings">
-        <h2><span class="section-num">06</span> Findings &amp; Recommendations</h2>
-        <h3>Key Findings</h3>
-        <ul id="findings-list"></ul>
-        <h3>Recommendations</h3>
-        <ol id="recommendations-list"></ol>
+      <section class="panel chapter" id="findings">
+        <header class="chapter-header">
+          <h2>Findings and Insights</h2>
+        </header>
+        <ul id="findings-list" class="narrative-list"></ul>
       </section>
 
+      <section class="panel chapter" id="recommendation">
+        <header class="chapter-header">
+          <h2>Recommendation</h2>
+        </header>
+        <ol id="recommendations-list" class="narrative-list"></ol>
+      </section>
+
+      <section class="panel chapter" id="appendix-methodology">
+        <header class="chapter-header">
+          <h2>Method Notes &amp; Code Showcase</h2>
+        </header>
+
+        <ul class="appendix-notes">
+          <li>Missing values in <code>sellingprice</code>, <code>mmr</code>, and <code>saledate</code> were coerced and excluded only where required per metric.</li>
+          <li>Time-series summaries were derived from parsed <code>saledate</code> values (<code>sale_year</code>, <code>sale_month</code>).</li>
+          <li>Full summary tables are available in <code>/outputs/tables</code>.</li>
+        </ul>
+
+        <div class="code-grid">
+          <article class="code-showcase-card">
+            <h3>Cleaning and feature engineering</h3>
+            <p class="code-desc" id="desc-cleaning"></p>
+            <pre><code id="code-cleaning"></code></pre>
+          </article>
+          <article class="code-showcase-card">
+            <h3>Category aggregation</h3>
+            <p class="code-desc" id="desc-category"></p>
+            <pre><code id="code-category"></code></pre>
+          </article>
+          <article class="code-showcase-card">
+            <h3>Time aggregation</h3>
+            <p class="code-desc" id="desc-time"></p>
+            <pre><code id="code-time"></code></pre>
+          </article>
+          <article class="code-showcase-card">
+            <h3>Additional insight metric</h3>
+            <p class="code-desc" id="desc-additional"></p>
+            <pre><code id="code-additional"></code></pre>
+          </article>
+        </div>
+      </section>
     </main>
   </body>
 </html>
