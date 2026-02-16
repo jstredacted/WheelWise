@@ -167,6 +167,14 @@ Luxury and specialty brands (Rolls-Royce, Ferrari, Lamborghini) command dramatic
 
 4. **Monitor niche segments for premium opportunities.** Brands that consistently sell above MMR (such as specialty and luxury makes) represent margin opportunities. Tracking which segments sustain above-market pricing can guide targeted acquisition strategies for higher-margin inventory.
 
+## 8. Data Quality Notes (Pricing Anomalies)
+- 23 records have selling prices at or below $100, including 4 record(s) at exactly $1.
+- 1 record(s) exceed $200,000 selling price; the maximum is $230,000 (FORD Escape 2014).
+- 7 record(s) have absolute price-vs-MMR gaps above $50,000; the largest absolute gap is $207,200 (FORD Escape 2014).
+- 10,301 rows are missing make values, and 140 rows use inconsistent/non-standard make labels (e.g., LANDROVER (27) vs LAND ROVER; VW (24) vs VOLKSWAGEN; MERCEDES (70) vs MERCEDES-BENZ).
+- 16,867 rows share a VIN with at least one other row; validate whether these are expected re-listings before assuming one row per vehicle.
+- Small-sample bias exists in make-level rankings: 8 of the top 10 average-price makes and 9 of the top 10 price-vs-MMR makes have fewer than 30 records.
+
 ## Appendix: Method Notes
 - Missing values in `sellingprice`, `mmr`, and `saledate` were handled with coercion and excluded only where required per metric.
 - Time-series summaries were derived from parsed `saledate` values (`sale_year`, `sale_month`).

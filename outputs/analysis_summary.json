@@ -20,5 +20,23 @@
     "peak_year_transactions": 505074,
     "peak_month": "2015-02",
     "peak_month_transactions": 163052
+  },
+  "data_quality": {
+    "low_price_threshold": 100,
+    "high_price_threshold": 200000,
+    "extreme_gap_threshold": 50000,
+    "low_price_count": 23,
+    "one_dollar_count": 4,
+    "high_price_count": 1,
+    "max_sellingprice": 230000.0,
+    "max_sellingprice_example": "FORD Escape 2014",
+    "extreme_gap_count": 7,
+    "max_abs_gap": 207200.0,
+    "max_abs_gap_example": "FORD Escape 2014",
+    "missing_make_count": 10301,
+    "inconsistent_make_label_count": 140,
+    "duplicate_vin_rows": 16867,
+    "top_price_small_sample_count": 8,
+    "top_vs_mmr_small_sample_count": 9
   }
 }

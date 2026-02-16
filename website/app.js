@@ -72,7 +72,7 @@ const MAP_VISIBLE_COUNTRIES = new Set(["US"]);
 const US_MAP_VIEW = {
   centerLon: -96,
   centerLat: 37.5,
-  scaleFactor: 0.6,
+  scaleFactor: 0.8,
 };
 const CONTIGUOUS_US_BOUNDS = {
   minLon: -125,
@@ -1574,6 +1574,23 @@ function renderNarrative(data) {
     .join("");
 }
 
+function renderDataQualityNotes(data) {
+  const listEl = document.querySelector("#data-quality-notes-list");
+  if (!listEl) return;
+
+  const notes = Array.isArray(data?.data_quality_notes)
+    ? data.data_quality_notes
+    : [];
+
+  if (notes.length === 0) {
+    listEl.innerHTML =
+      "<li>No major pricing anomalies were flagged by the current data-quality checks.</li>";
+    return;
+  }
+
+  listEl.innerHTML = notes.map((item) => `<li>${item}</li>`).join("");
+}
+
 async function init() {
   try {
     const [dashboardRes, mapRes, previewRes] = await Promise.all([
@@ -1599,6 +1616,7 @@ async function init() {
     const regionMarkers = renderLiveBoard(dashboardData);
     renderDottedMap(mapData, regionMarkers);
     renderNarrative(dashboardData);
+    renderDataQualityNotes(dashboardData);
 
     const { makeFilter, yearFilter } = buildFilters(dashboardData);
 

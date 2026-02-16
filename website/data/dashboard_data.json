@@ -21,6 +21,24 @@
       "peak_year_transactions": 505074,
       "peak_month": "2015-02",
       "peak_month_transactions": 163052
+    },
+    "data_quality": {
+      "low_price_threshold": 100,
+      "high_price_threshold": 200000,
+      "extreme_gap_threshold": 50000,
+      "low_price_count": 23,
+      "one_dollar_count": 4,
+      "high_price_count": 1,
+      "max_sellingprice": 230000.0,
+      "max_sellingprice_example": "FORD Escape 2014",
+      "extreme_gap_count": 7,
+      "max_abs_gap": 207200.0,
+      "max_abs_gap_example": "FORD Escape 2014",
+      "missing_make_count": 10301,
+      "inconsistent_make_label_count": 140,
+      "duplicate_vin_rows": 16867,
+      "top_price_small_sample_count": 8,
+      "top_vs_mmr_small_sample_count": 9
     }
   },
   "data_dictionary": [
@@ -5293,6 +5311,14 @@
       "sale_year": 2015.0,
       "avg_price_vs_mmr": -144.44525356680407
     }
+  ],
+  "data_quality_notes": [
+    "23 records have selling prices at or below $100, including 4 record(s) at exactly $1.",
+    "1 record(s) exceed $200,000 selling price; the maximum is $230,000 (FORD Escape 2014).",
+    "7 record(s) have absolute price-vs-MMR gaps above $50,000; the largest absolute gap is $207,200 (FORD Escape 2014).",
+    "10,301 rows are missing make values, and 140 rows use inconsistent/non-standard make labels (e.g., LANDROVER (27) vs LAND ROVER; VW (24) vs VOLKSWAGEN; MERCEDES (70) vs MERCEDES-BENZ).",
+    "16,867 rows share a VIN with at least one other row; validate whether these are expected re-listings before assuming one row per vehicle.",
+    "Small-sample bias exists in make-level rankings: 8 of the top 10 average-price makes and 9 of the top 10 price-vs-MMR makes have fewer than 30 records."
   ],
   "code_showcase": {
     "cleaning": {
