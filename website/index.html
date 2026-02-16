@@ -42,7 +42,7 @@
           </aside>
 
           <div class="map-stage">
-            <svg id="map-svg" viewBox="0 0 1100 600" role="img" aria-label="Dotted world activity map">
+            <svg id="map-svg" viewBox="0 0 1100 600" role="img" aria-label="Dotted contiguous U.S. activity map">
               <g id="map-static-layer"></g>
               <g id="map-active-layer"></g>
               <g id="map-marker-layer"></g>
@@ -97,58 +97,57 @@
         <header class="chapter-header">
           <h2>Introduction</h2>
         </header>
-        <div class="intro-copy">
-          <p>
-            The dataset contains used-car sales transactions with fields for vehicle details, seller, condition, odometer
-            reading, market reference value (MMR), final selling price, and sale date.
-          </p>
-          <p>
-            The data likely originates from an operational automotive sales platform where each transaction captures a specific sale event.
-          </p>
-          <p>
-            This report converts raw operational records into analytical summaries by category, time, and pricing behavior.
-          </p>
+        <div class="intro-layout">
+          <div class="intro-main">
+            <div class="intro-copy">
+              <p>
+                The dataset contains used-car sales transactions with fields for vehicle details, seller, condition, odometer
+                reading, market reference value (MMR), final selling price, and sale date.
+              </p>
+              <p>
+                Each row captures one sale event, including what was sold, who sold it, when it was sold, and for how much.
+              </p>
+              <p>
+                This report converts those high-volume operational records into analytical summaries by category, time, and
+                pricing behavior.
+              </p>
+            </div>
+          </div>
+          <div id="dataset-kpis" class="kpi-grid intro-kpis"></div>
         </div>
-        <div id="dataset-kpis" class="kpi-grid"></div>
       </section>
 
       <section class="panel chapter" id="data-dictionary">
-        <header class="chapter-header">
-          <h2>Data Dictionary</h2>
-        </header>
-        <p class="chapter-note">All 16 original columns in <code>car_prices.csv</code>, with types, examples, and notes.</p>
-        <div id="dictionary-grid" class="dictionary-grid"></div>
-      </section>
+        <div class="dictionary-layout">
+          <div class="dictionary-pane">
+            <header class="chapter-header">
+              <h2>Data Dictionary</h2>
+            </header>
+            <p class="chapter-note">
+              Focused on the columns used in this analysis: <code>year</code>, <code>make</code>, <code>body</code>,
+              <code>state</code>, <code>sellingprice</code>, <code>mmr</code>, and <code>saledate</code>.
+            </p>
+            <div id="dictionary-carousel" class="dictionary-carousel-shell"></div>
+          </div>
 
-      <section class="panel chapter" id="oltp-perspective">
-        <header class="chapter-header">
-          <h2>OLTP Perspective</h2>
-        </header>
-        <div class="text-grid">
-          <article class="text-card">
-            <h3>Why this is transactional data</h3>
-            <p>
-              One row represents one completed car sale transaction. It stores what car was sold, by whom, when, and for how much.
-            </p>
-          </article>
-          <article class="text-card">
-            <h3>Operational characteristics</h3>
-            <p>
-              The data is event-level and high-volume, designed for day-to-day operational recording rather than summarized reporting.
-            </p>
-          </article>
-          <article class="text-card">
-            <h3>Likely source system</h3>
-            <p>
-              A vehicle sales transaction management system integrated with dealer inventory and auction workflows.
-            </p>
-          </article>
+          <aside class="data-preview-pane">
+            <header class="chapter-header chapter-header--tight">
+              <h3>Data Preview</h3>
+              <p id="data-preview-note" class="chapter-note">First 5 rows with all original column headers.</p>
+            </header>
+            <div
+              id="dataset-preview-table"
+              class="data-preview-shell"
+              role="region"
+              aria-label="Dataset preview table"
+            ></div>
+          </aside>
         </div>
       </section>
 
       <section class="panel chapter analysis" id="analysis">
         <header class="chapter-header">
-          <h2>Data Analysis (OLAP Results)</h2>
+          <h2>Data Analysis</h2>
           <p class="chapter-note">Filter by make and year to inspect volume and pricing behavior.</p>
         </header>
 
