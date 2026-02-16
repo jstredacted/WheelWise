@@ -416,6 +416,24 @@ function formatPeakMonth(value) {
   return `${monthDate.toLocaleString("en-US", { month: "short" })} ${year}`;
 }
 
+function formatPercent(value, digits = 1) {
+  const numeric = Number(value);
+  if (!Number.isFinite(numeric)) return "0.0%";
+  return `${numeric.toFixed(digits)}%`;
+}
+
+function getStateConcentration(topStates, totalTransactions, count = 3) {
+  const rows = (topStates || []).slice(0, Math.max(0, count));
+  const safeTotal = Math.max(0, Number(totalTransactions) || 0);
+  const transactions = rows.reduce(
+    (sum, row) => sum + (Number(row.transactions) || 0),
+    0
+  );
+  const share = safeTotal > 0 ? (transactions / safeTotal) * 100 : 0;
+
+  return { rows, transactions, share };
+}
+
 function createKpi(label, value) {
   return `<article class="kpi"><div class="label">${label}</div><div class="value">${value}</div></article>`;
 }
@@ -493,6 +511,28 @@ function renderTopStates(topStates) {
       fps: 16,
     });
   });
+}
+
+function setMapConcentrationInsight(data) {
+  const insightEl = document.querySelector("#map-concentration-insight");
+  if (!insightEl) return;
+
+  const totalTransactions = Number(data?.summary?.dataset?.rows) || 0;
+  const topStates = data?.top_states || [];
+
+  if (totalTransactions <= 0 || topStates.length === 0) {
+    insightEl.textContent = "State concentration insight unavailable.";
+    return;
+  }
+
+  const topThree = getStateConcentration(topStates, totalTransactions, 3);
+  const stateNames = topThree.rows
+    .map((row) => formatStateName(row.state))
+    .join(", ");
+
+  insightEl.textContent =
+    `${stateNames} account for ${formatPercent(topThree.share)} of total volume ` +
+    `(${formatNumber(topThree.transactions)} of ${formatNumber(totalTransactions)} transactions).`;
 }
 
 function setSummaryCards(data) {
@@ -847,18 +887,26 @@ function setCodeShowcase(codeShowcase) {
   setText("#desc-additional", codeShowcase?.additional_summary?.description);
 }
 
-function buildUsRegionMarkers(topStates, limit = 7) {
+function buildUsRegionMarkers(topStates, totalTransactions, limit = 7) {
+  const safeTotal = Math.max(0, Number(totalTransactions) || 0);
+
   return (topStates || [])
     .map((row, index) => {
       const stateCode = getStateCode(row.state);
       const stateMarker = US_STATE_MARKERS[stateCode];
       if (!stateMarker) return null;
 
+      const transactions = Number(row.transactions) || 0;
+      const share = safeTotal > 0 ? transactions / safeTotal : 0;
+
       return {
         id: stateCode,
         name: stateMarker.name,
         coordinates: stateMarker.coordinates,
         color: getStateColor(stateCode, index),
+        transactions,
+        share,
+        rank: index + 1,
       };
     })
     .filter(Boolean)
@@ -869,6 +917,7 @@ function renderLiveBoard(data) {
   const dataset = data.summary?.dataset || {};
   const totalMetric = document.querySelector("#metric-total");
   const rateMetric = document.querySelector("#metric-rate");
+  const totalTransactions = Number(dataset.rows) || 0;
 
   animateCounterToTarget({
     valueEl: totalMetric,
@@ -880,8 +929,9 @@ function renderLiveBoard(data) {
   });
 
   renderTopStates(data.top_states);
-  const regionMarkers = buildUsRegionMarkers(data.top_states, 7);
+  const regionMarkers = buildUsRegionMarkers(data.top_states, totalTransactions, 7);
   document.querySelector("#region-count").textContent = String(regionMarkers.length);
+  setMapConcentrationInsight(data);
   setSummaryCards(data);
 
   return regionMarkers;
@@ -1074,15 +1124,22 @@ function renderDottedMap(dottedMapData, regionMarkers) {
             nearestMatch && nearestMatch.distanceSq <= TOP_STATE_COLOR_RADIUS_SQ;
 
           if (isTopStateCoverage) {
-            pixel.setAttribute("fill", nearestMatch.marker.color || color);
+            const markerShare = Number(nearestMatch.marker.share) || 0;
+            const shareStrength = Math.min(1, markerShare / 0.15);
+            const isCoreCoverage = nearestMatch.distanceSq <= TOP_STATE_COLOR_RADIUS_SQ * 0.3;
+            const weightedOpacity = 0.55 + shareStrength * 0.4;
 
-            if (nearestMatch.distanceSq <= TOP_STATE_COLOR_RADIUS_SQ * 0.3) {
+            pixel.setAttribute("fill", nearestMatch.marker.color || color);
+            pixel.style.fillOpacity = weightedOpacity.toFixed(2);
+
+            if (isCoreCoverage && (nearestMatch.marker.rank <= 3 || markerShare >= 0.1)) {
               pixel.classList.add("pulse-strong");
             } else {
               pixel.classList.add("pulse-soft");
             }
 
             pixel.style.animationDelay = `${(city.cityDistanceRank % 8) * 0.17}s`;
+            pixel.style.animationDuration = `${2.5 - shareStrength * 0.8}s`;
             activeFragment.appendChild(pixel);
           } else {
             staticFragment.appendChild(pixel);
@@ -1112,7 +1169,9 @@ function renderDottedMap(dottedMapData, regionMarkers) {
 
     const showTooltip = () => {
       tooltip.hidden = false;
-      tooltip.textContent = `▲ ${marker.id} · ${marker.name}`;
+      tooltip.textContent =
+        `▲ ${marker.id} · ${marker.name} · ${formatNumber(marker.transactions)} tx · ` +
+        `${formatPercent(marker.share * 100)} · Rank #${marker.rank}`;
       tooltip.style.left = `${(x / width) * 100}%`;
       tooltip.style.top = `${(y / height) * 100}%`;
     };
@@ -1482,15 +1541,26 @@ function renderNarrative(data) {
   const summary = data.summary || {};
   const kpis = summary.kpis || {};
   const dataset = summary.dataset || {};
+  const topStates = data.top_states || [];
+  const totalTransactions = Number(dataset.rows) || 0;
+  const topThree = getStateConcentration(topStates, totalTransactions, 3);
+  const topTen = getStateConcentration(topStates, totalTransactions, 10);
+  const topStateName = formatStateName(kpis.top_state);
+  const topThreeNames = topThree.rows
+    .map((row) => formatStateName(row.state))
+    .join(", ");
 
   const findings = [
     `The dataset contains ${formatNumber(dataset.rows)} transactions, indicating high-volume market activity.`,
     `${kpis.top_make} is the highest-volume make at ${formatNumber(kpis.top_make_transactions)} sales.`,
+    `${topThreeNames} together account for ${formatPercent(topThree.share)} of total transactions, with ${topStateName} leading.`,
     `${kpis.peak_month} is the strongest month with ${formatNumber(kpis.peak_month_transactions)} transactions.`,
     `Average selling price is ${formatMoney(kpis.average_sellingprice)}, and average price vs MMR is ${formatSignedMoney(kpis.average_price_vs_mmr)}.`,
   ];
 
   const recommendations = [
+    `Prioritize inventory, transport lanes, and staffing in ${topThreeNames}; these states drive ${formatPercent(topThree.share)} of all transactions.`,
+    `Use ${topStateName} and the rest of the top-10 states first for pricing controls, since they represent ${formatPercent(topTen.share)} of volume and will move total margin outcomes fastest.`,
     "Prioritize stock planning for the top make and body categories to maximize turnover.",
     "Investigate persistent negative price-vs-MMR gaps and tighten pricing floor rules.",
     "Use monthly demand spikes to schedule reconditioning capacity and listing cadence.",
