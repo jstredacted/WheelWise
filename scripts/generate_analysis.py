@@ -254,6 +254,86 @@ def main() -> None:
         .sort_values("sale_year")
     )
 
+    # Data quality checks for pricing anomalies and label consistency
+    low_price_threshold = 100
+    high_price_threshold = 200000
+    extreme_gap_threshold = 50000
+
+    price_valid = df["sellingprice"].dropna()
+    gap_valid = df["price_vs_mmr"].dropna()
+
+    low_price_count = int((df["sellingprice"] <= low_price_threshold).sum())
+    one_dollar_count = int((df["sellingprice"] == 1).sum())
+    high_price_count = int((df["sellingprice"] > high_price_threshold).sum())
+    extreme_gap_count = int((df["price_vs_mmr"].abs() > extreme_gap_threshold).sum())
+    missing_make_count = int(df["make"].isna().sum())
+
+    vin_series = df["vin"].astype("string").str.strip()
+    duplicate_vin_rows = int(vin_series.duplicated(keep=False).sum())
+
+    make_value_counts = df["make"].value_counts(dropna=True)
+    make_variant_pairs = {
+        "LANDROVER": "LAND ROVER",
+        "VW": "VOLKSWAGEN",
+        "MERCEDES": "MERCEDES-BENZ",
+    }
+    variant_notes: list[str] = []
+    variant_row_count = 0
+    for variant, canonical in make_variant_pairs.items():
+        variant_count = int(make_value_counts.get(variant, 0))
+        if variant_count > 0:
+            variant_notes.append(f"{variant} ({variant_count:,}) vs {canonical}")
+            variant_row_count += variant_count
+
+    truck_tag_count = int(df["make"].str.contains(r"\bTRUCK\b|\b TK\b", na=False).sum())
+    if truck_tag_count > 0:
+        variant_notes.append(f"non-standard '* TRUCK/* TK' labels ({truck_tag_count:,})")
+        variant_row_count += truck_tag_count
+
+    max_price = float(price_valid.max()) if not price_valid.empty else 0.0
+    max_gap = float(gap_valid.abs().max()) if not gap_valid.empty else 0.0
+
+    def compact_vehicle_label(row: pd.Series) -> str:
+        year = int(row["year"]) if pd.notna(row["year"]) else None
+        parts = [
+            str(row["make"]) if pd.notna(row["make"]) else "Unknown make",
+            str(row["model"]) if pd.notna(row["model"]) else "Unknown model",
+            str(year) if year is not None else "",
+        ]
+        return " ".join(p for p in parts if p)
+
+    max_price_example = "Unavailable"
+    if not price_valid.empty:
+        max_price_row = df.loc[df["sellingprice"].idxmax()]
+        max_price_example = compact_vehicle_label(max_price_row)
+
+    max_gap_example = "Unavailable"
+    if not gap_valid.empty:
+        max_gap_row = df.loc[df["price_vs_mmr"].abs().idxmax()]
+        max_gap_example = compact_vehicle_label(max_gap_row)
+
+    make_price_counts = (
+        df.dropna(subset=["make", "sellingprice"])
+        .groupby("make")
+        .size()
+    )
+    top_price_small_sample_count = int(
+        avg_price_by_make.head(10)["make"].map(make_price_counts).fillna(0).lt(30).sum()
+    )
+    top_vs_mmr_small_sample_count = int(
+        price_vs_mmr_by_make.head(10)["make"].map(make_price_counts).fillna(0).lt(30).sum()
+    )
+
+    variant_examples = "; ".join(variant_notes[:3]) if variant_notes else "none detected"
+    data_quality_notes = [
+        f"{low_price_count:,} records have selling prices at or below ${low_price_threshold:,}, including {one_dollar_count:,} record(s) at exactly $1.",
+        f"{high_price_count:,} record(s) exceed ${high_price_threshold:,} selling price; the maximum is ${max_price:,.0f} ({max_price_example}).",
+        f"{extreme_gap_count:,} record(s) have absolute price-vs-MMR gaps above ${extreme_gap_threshold:,}; the largest absolute gap is ${max_gap:,.0f} ({max_gap_example}).",
+        f"{missing_make_count:,} rows are missing make values, and {variant_row_count:,} rows use inconsistent/non-standard make labels (e.g., {variant_examples}).",
+        f"{duplicate_vin_rows:,} rows share a VIN with at least one other row; validate whether these are expected re-listings before assuming one row per vehicle.",
+        f"Small-sample bias exists in make-level rankings: {top_price_small_sample_count:,} of the top 10 average-price makes and {top_vs_mmr_small_sample_count:,} of the top 10 price-vs-MMR makes have fewer than 30 records.",
+    ]
+
     # Save tables
     tx_by_make.to_csv(TABLES_DIR / "transactions_by_make.csv", index=False)
     tx_by_body.to_csv(TABLES_DIR / "transactions_by_body.csv", index=False)
@@ -306,6 +386,24 @@ def main() -> None:
             "peak_month": str(monthly_peak["year_month"]),
             "peak_month_transactions": int(monthly_peak["transactions"]),
         },
+        "data_quality": {
+            "low_price_threshold": low_price_threshold,
+            "high_price_threshold": high_price_threshold,
+            "extreme_gap_threshold": extreme_gap_threshold,
+            "low_price_count": low_price_count,
+            "one_dollar_count": one_dollar_count,
+            "high_price_count": high_price_count,
+            "max_sellingprice": max_price,
+            "max_sellingprice_example": max_price_example,
+            "extreme_gap_count": extreme_gap_count,
+            "max_abs_gap": max_gap,
+            "max_abs_gap_example": max_gap_example,
+            "missing_make_count": missing_make_count,
+            "inconsistent_make_label_count": variant_row_count,
+            "duplicate_vin_rows": duplicate_vin_rows,
+            "top_price_small_sample_count": top_price_small_sample_count,
+            "top_vs_mmr_small_sample_count": top_vs_mmr_small_sample_count,
+        },
     }
 
     (OUT_DIR / "analysis_summary.json").write_text(json.dumps(summary, indent=2))
@@ -326,6 +424,7 @@ def main() -> None:
         "price_vs_mmr_by_make": to_records(price_vs_mmr_by_make),
         "price_vs_mmr_by_make_year": to_records(price_vs_mmr_by_make_year),
         "price_vs_mmr_by_year": to_records(price_vs_mmr_by_year),
+        "data_quality_notes": data_quality_notes,
         "code_showcase": {
             "cleaning": {
                 "description": "Standardize text columns to uppercase and parse the raw saledate string (which includes timezone abbreviations) into a proper datetime for time-series analysis.",
@@ -346,6 +445,9 @@ def main() -> None:
         },
     }
     (WEBSITE_DATA_DIR / "dashboard_data.json").write_text(json.dumps(website_payload, indent=2))
+
+    data_quality_notes_md = "\n".join(f"- {note}" for note in data_quality_notes)
+    data_quality_notes_html = "".join(f"<li>{note}</li>" for note in data_quality_notes)
 
     # Report draft (paper output)
     report_md = f"""# Mini Data Analysis & Reporting Activity
@@ -430,6 +532,9 @@ Luxury and specialty brands (Rolls-Royce, Ferrari, Lamborghini) command dramatic
 3. **Leverage seasonal peaks for operational planning.** The strong monthly fluctuations — particularly the surge in early 2015 — suggest that staffing, logistics, and marketing budgets should be aligned with predictable high-volume periods rather than spread evenly across the year.
 
 4. **Monitor niche segments for premium opportunities.** Brands that consistently sell above MMR (such as specialty and luxury makes) represent margin opportunities. Tracking which segments sustain above-market pricing can guide targeted acquisition strategies for higher-margin inventory.
+
+## 8. Data Quality Notes (Pricing Anomalies)
+{data_quality_notes_md}
 
 ## Appendix: Method Notes
 - Missing values in `sellingprice`, `mmr`, and `saledate` were handled with coercion and excluded only where required per metric.
@@ -521,6 +626,11 @@ Luxury and specialty brands (Rolls-Royce, Ferrari, Lamborghini) command dramatic
     <li><strong>Leverage seasonal peaks for operational planning.</strong> The strong monthly fluctuations &mdash; particularly the surge in early 2015 &mdash; suggest that staffing, logistics, and marketing budgets should be aligned with predictable high-volume periods rather than spread evenly across the year.</li>
     <li><strong>Monitor niche segments for premium opportunities.</strong> Brands that consistently sell above MMR (such as specialty and luxury makes) represent margin opportunities. Tracking which segments sustain above-market pricing can guide targeted acquisition strategies for higher-margin inventory.</li>
   </ol>
+
+  <h2>8. Data Quality Notes (Pricing Anomalies)</h2>
+  <ul>
+    {data_quality_notes_html}
+  </ul>
 
   <h2>Appendix: Method Notes</h2>
   <ul>
