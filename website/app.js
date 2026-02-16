@@ -699,6 +699,7 @@ function getRelevantDictionaryColumns(dictionary) {
 function initDataDictionaryCarousel(container) {
   const viewport = container.querySelector(".dict-viewport");
   const track = container.querySelector(".dict-track");
+  const frame = container.querySelector(".dictionary-carousel-frame");
   const slides = [...container.querySelectorAll(".dict-slide")];
   const dots = [...container.querySelectorAll(".dict-dot")];
   const prevBtn = container.querySelector('.dict-nav[data-dir="prev"]');
@@ -711,9 +712,34 @@ function initDataDictionaryCarousel(container) {
   let dragStartX = 0;
   let dragDeltaX = 0;
   let pointerId = null;
+  let sizeFrameRequest = null;
 
   const normalizeIndex = (index) =>
     ((index % slides.length) + slides.length) % slides.length;
+
+  const isCompactViewport = () => window.matchMedia("(max-width: 1260px)").matches;
+
+  const sizeFrameToActiveSlide = () => {
+    if (!frame) return;
+
+    if (!isCompactViewport()) {
+      frame.style.removeProperty("height");
+      frame.style.removeProperty("aspect-ratio");
+      return;
+    }
+
+    const activeSlide = slides[currentIndex];
+    if (!activeSlide) return;
+
+    const viewportHeight = window.innerHeight || 800;
+    const minHeight = 170;
+    const maxHeight = Math.min(320, Math.max(220, viewportHeight * 0.36));
+    const desiredHeight = Math.ceil(activeSlide.scrollHeight + 20);
+    const nextHeight = Math.max(minHeight, Math.min(desiredHeight, maxHeight));
+
+    frame.style.setProperty("aspect-ratio", "auto");
+    frame.style.setProperty("height", `${nextHeight}px`);
+  };
 
   const syncState = () => {
     track.style.transform = `translateX(${-currentIndex * 100}%)`;
@@ -726,6 +752,7 @@ function initDataDictionaryCarousel(container) {
       dot.classList.toggle("is-active", active);
       dot.setAttribute("aria-current", active ? "true" : "false");
     });
+    sizeFrameToActiveSlide();
   };
 
   const goTo = (index) => {
@@ -802,7 +829,21 @@ function initDataDictionaryCarousel(container) {
     }
   });
 
+  if (window.__dictionaryCarouselResizeHandler) {
+    window.removeEventListener("resize", window.__dictionaryCarouselResizeHandler);
+    window.removeEventListener("orientationchange", window.__dictionaryCarouselResizeHandler);
+  }
+
+  window.__dictionaryCarouselResizeHandler = () => {
+    if (sizeFrameRequest) cancelAnimationFrame(sizeFrameRequest);
+    sizeFrameRequest = requestAnimationFrame(sizeFrameToActiveSlide);
+  };
+  window.addEventListener("resize", window.__dictionaryCarouselResizeHandler, { passive: true });
+  window.addEventListener("orientationchange", window.__dictionaryCarouselResizeHandler);
+
   syncState();
+  requestAnimationFrame(sizeFrameToActiveSlide);
+  setTimeout(sizeFrameToActiveSlide, 120);
 }
 
 function renderDataDictionary(dictionary) {

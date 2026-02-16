@@ -977,8 +977,12 @@ pre code {
   .dictionary-carousel-frame {
     width: min(100%, 480px);
     max-width: 100%;
-    aspect-ratio: auto;
-    height: min(300px, 45vh);
+  }
+
+  .dict-viewport {
+    box-shadow:
+      0 0 0 1px rgba(255, 255, 255, 0.02) inset,
+      0 10px 28px rgba(0, 0, 0, 0.32);
   }
 
   .dict-nav {
@@ -1005,8 +1009,8 @@ pre code {
 
 @media (max-width: 640px) {
   .dictionary-carousel-frame {
-    aspect-ratio: auto;
-    height: min(240px, 40vh);
+    width: 100%;
+    max-width: 100%;
   }
 
   .dict-slide {
