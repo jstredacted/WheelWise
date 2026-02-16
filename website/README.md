@@ -1,17 +1,37 @@
-# Car Prices Dashboard Demo
+# WheelWise Website
 
-This is a static website for the Mini Data Analysis activity.
+Static presentation website for the Mini Data Analysis activity.
 
-## Local run
+## Local Run
 
 From project root:
 
 ```bash
+# Regenerate dashboard payload and report artifacts
 python scripts/generate_analysis.py
+
+# Serve the website
 python -m http.server 8000 --directory website
 ```
 
 Open `http://localhost:8000`.
+
+## Current Features
+
+- Dotted U.S. map with top-state regional markers and concentration highlighting
+- Summary cards for transactions, price validity, pricing health, and regional focus
+- Data Dictionary carousel focused on analysis-used columns
+- Data Preview table with full original headers
+- Make/Year filters that drive both KPIs and Plotly charts
+- Findings, recommendations, method notes, and data-quality anomaly notes
+
+## Recent Changes
+
+- Improved responsive sizing for the map and dictionary carousel/cards.
+- Added data-quality anomaly notes section to the website appendix.
+- Refined dictionary + preview split layout and state-name display normalization.
+- Connected map marker intensity and recommendations to top-state concentration.
+- Updated dashboard interactions so make/year filtering affects KPIs and charts together.
 
 ## Deploy (Vercel)
 
